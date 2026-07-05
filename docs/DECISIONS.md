@@ -21,21 +21,22 @@ decision, move it up to Locked with a date and a one-line rationale.
   skill works standalone with pasted data.
 - **Resolution rule:** one skill = one JTBD + one deliverable. `resume-review` and
   `tailor-to-job` kept separate but share the rubric. `comp-analysis` and
-  `skills-market-report` kept separate but share `teal-mcp.md`.
+  `skills-market-report` kept separate but share `teal-mcp.md`. `earn-more-plan` is
+  separate because it compares multiple money trajectories in one interactive report.
 - **Positioning:** cover Searching competently; **lead with Growing + Thriving**. Do
   not try to out-job-search career-ops. Stay light — no dashboard, no scanners.
 - **GTM:** repo is top-of-funnel for the MCP and Teal; each skill is its own
   LinkedIn/YouTube artifact; light Teal footer on each skill.
 - **Versioning/install:** semver + rename map in VERSIONS.md; install via
   `npx skills add`, plugin marketplace, and git clone.
+- **Thriving ships in v1:** decided 2026-07-05. Ship at least `win-log` and
+  `career-checkin` in v1 so the four-mode story is real at launch, not a promise.
 
 ## Open (resolve before v1 ships)
 
-1. **Thriving in v1 or fast-follow?** Recommendation: ship ≥2 Thriving skills
-   (`win-log` + `career-checkin`) in v1 so the four-quadrant story is complete.
-2. **`resume-review` / `tailor-to-job` final merge call?** Recommendation: keep
+1. **`resume-review` / `tailor-to-job` final merge call?** Recommendation: keep
    separate, share rubric. Revisit only if behavior converges.
-3. **Symlink vs. sync script** — decided by the §6 compatibility spike. Record the
+2. **Symlink vs. sync script** — decided by the §6 compatibility spike. Record the
    result here.
-4. **Exact plugin-marketplace schema** — verify `.claude-plugin/marketplace.json`
+3. **Exact plugin-marketplace schema** — verify `.claude-plugin/marketplace.json`
    against the current spec during the spike; update the stub.

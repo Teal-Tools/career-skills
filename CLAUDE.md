@@ -134,9 +134,9 @@ Applied decisions:
   share `references/teal-mcp.md`.
 - The **"capabilities dump"** idea is **not a standalone skill** — it is the deep-
   interview path *inside* `career-profile`.
-- The Pocock-style "grill me" appears in three skills (`career-profile`'s deep path,
-  `performance-self-review`, `career-clarity`). The interview *technique* is extracted
-  to `references/interview-technique.md` so it's authored once.
+- The Pocock-style "grill me" appears across the profile, clarity, review, check-in,
+  win-log, and interview-prep flows. The interview *technique* is extracted to
+  `references/interview-technique.md` so it's authored once.
 
 ---
 
@@ -154,7 +154,7 @@ and marketingskills's `product-marketing`.
   narrative.
 - `career-clarity` and `win-log` also write back into it.
 
-This is what stops all 14 skills from re-asking for the user's resume, and what makes
+This is what stops all skills from re-asking for the user's resume, and what makes
 outputs compound over time. **Build it first.** Its schema lives in
 `skills/career-profile/profile-schema.md`.
 
@@ -166,12 +166,12 @@ Three files in `references/`, imported by multiple skills:
 
 - **`interview-technique.md`** — how to run a good adaptive "grill me" interview: one
   question at a time, dig on vague answers, quantify everything, don't accept the
-  first surface answer. Imported by `career-profile` (deep path),
-  `performance-self-review`, `career-clarity`, `interview-prep`.
+  first surface answer. Imported by `career-profile` (deep path), `win-log`,
+  `career-checkin`, `performance-self-review`, `career-clarity`, `interview-prep`.
 - **`teal-mcp.md`** — how to query aggregated job data, which tools exist, and the
-  **graceful no-MCP fallback**. Imported by `comp-analysis`, `offer-review`,
-  `skills-market-report`, `tailor-to-job`. This is both the moat and the cross-CLI
-  compatibility guarantee.
+  **graceful no-MCP fallback**. Imported by `earn-more-plan`, `comp-analysis`,
+  `offer-review`, `skills-market-report`, `tailor-to-job`. This is both the moat and
+  the cross-CLI compatibility guarantee.
 - **`teal-method.md`** — the TEAL bullet framework for resume writing. Imported by
   `resume-review`, `tailor-to-job`, `win-log`.
 
@@ -206,16 +206,24 @@ Report back what you find and pick symlink vs. sync before building more skills.
 
 ---
 
-## 7. The full skill inventory (14 skills, by mode)
+## 7. The full skill inventory (15 skills, by mode)
 
-Status legend: **[SPEC]** = stub exists, not yet built. All 14 are currently [SPEC].
-Each skill folder has a `SKILL.md` stub describing inputs, deliverable, dependencies,
-and MCP usage. See `docs/SKILL-INVENTORY.md` for the full one-line descriptions and
+Status legend: **[SPEC]** = stub exists, not yet built. Several skills are now built
+enough to use (`career-profile`, `win-log`, `comp-analysis`, `career-checkin`,
+`performance-self-review`, `career-clarity`, `skills-market-report`,
+`earn-more-plan`), while the rest remain stubs. See `docs/SKILL-INVENTORY.md` for
+current status and
 `docs/ARCHITECTURE.md` for the cross-reference diagram.
 
 **Foundation**
 - `career-profile` — one-time interview → persistent `.agents/career-profile.md`.
   Absorbs the capabilities-dump idea. **BUILD FIRST.**
+
+**Money / cross-mode**
+- `earn-more-plan` — compare three realistic ways to make more money: grow on current
+  path, change market/company/location, or build/pivot into higher upside. Produces an
+  interactive HTML report and reads `teal-mcp`, `career-profile`, `career-clarity`,
+  `skills-market-report`, and `win-log`.
 
 **Searching**
 - `resume-review` — scored review of a resume, no JD required.
@@ -249,7 +257,8 @@ and MCP usage. See `docs/SKILL-INVENTORY.md` for the full one-line descriptions 
 1. `career-profile` (unblocks everything)
 2. `references/interview-technique.md`, `references/teal-mcp.md`, `references/teal-method.md`
 3. Searching table-stakes: `resume-review` → `tailor-to-job` → `interview-prep`
-4. The moat: `comp-analysis` → `offer-review` → `skills-market-report`
+4. The money/data moat: `earn-more-plan` → `comp-analysis` → `offer-review` →
+   `skills-market-report`
 5. The differentiator (ship at least two for a complete four-quadrant launch story):
    `win-log` + `career-checkin`, then `performance-self-review`, `difficult-conversation`,
    `career-clarity`, `network-maintenance`
@@ -324,19 +333,20 @@ career-skills/
 ├── VERSIONS.md           ← changelog + rename map scaffold
 ├── docs/
 │   ├── ARCHITECTURE.md   ← layout, cross-reference diagram, resolution rule
-│   ├── SKILL-INVENTORY.md← all 14 skills, one-line descriptions, dependencies
+│   ├── SKILL-INVENTORY.md← all skills, one-line descriptions, dependencies
 │   └── DECISIONS.md      ← the locked decisions + the two still open
 ├── references/
-│   ├── interview-technique.md  ← [SPEC] the adaptive grill-me method
+│   ├── interview-technique.md  ← shared adaptive grill-me method
 │   ├── teal-mcp.md             ← [SPEC] job-data querying + fallback + tool list
 │   └── teal-method.md          ← [SPEC] TEAL bullet framework
-├── skills/<14 skills>/SKILL.md ← [SPEC] stubs, ready to fill
-├── scripts/validate.mjs        ← [SPEC] frontmatter/structure linter stub
+├── skills/<15 skills>/SKILL.md ← skill source files
+├── scripts/validate.mjs        ← dependency-free frontmatter/structure linter
 └── .claude-plugin/marketplace.json ← plugin install manifest stub
 ```
 
-Every `[SPEC]` file has a clear TODO block describing what to build. Nothing is
-finished — this scaffold is a *runway*, not a product.
+Remaining `[SPEC]` files have clear TODO blocks describing what to build. This repo is
+still early, but the shared profile, win log, comp analysis, check-in, and interview
+technique are now concrete enough to build against.
 
 ---
 

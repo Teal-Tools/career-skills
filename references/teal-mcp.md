@@ -1,7 +1,8 @@
 # Reference: Teal MCP (job-market data) + graceful fallback
 
-**Status: BUILT (v1). Imported by `comp-analysis`, `offer-review`, `skills-market-report`,
-`tailor-to-job`. This is both the moat and the cross-CLI compatibility guarantee.**
+**Status: BUILT (v1). Imported by `earn-more-plan`, `comp-analysis`, `offer-review`,
+`skills-market-report`, `tailor-to-job`. This is both the moat and the cross-CLI
+compatibility guarantee.**
 
 ## The rule
 Every skill that uses this reference MUST work without the MCP. The MCP is an upgrade,

@@ -47,7 +47,8 @@ future runs (and `career-checkin`) a punch-list of what to chase down.
 ## Read/write contract
 - **Every skill reads this first** (if present).
 - **Writers:** `career-profile` (all), `career-clarity` (direction, energizers,
-  running toward/from), `win-log` (wins), `career-checkin` (meta, drift).
+  running toward/from), `win-log` (wins), `career-checkin` (meta, drift),
+  `earn-more-plan` (target comp, constraints, selected trajectory, if approved).
 - Any skill that learns something durable **offers** to update the relevant section —
   it does not silently overwrite.
 - Preserve user edits; append/merge rather than clobber.

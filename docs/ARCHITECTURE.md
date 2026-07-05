@@ -44,13 +44,17 @@ Err away from over-granularity; skills should reference each other, not fragment
 Locked applications of the rule:
 - `resume-review` vs `tailor-to-job` → **separate**, share the scoring rubric.
 - `comp-analysis` vs `skills-market-report` → **separate**, share `teal-mcp.md`.
+- `earn-more-plan` vs `comp-analysis` / `skills-market-report` → **separate**:
+  `earn-more-plan` compares trajectories and produces an interactive strategy report;
+  the others deepen one comp benchmark or skill-gap question.
 - "capabilities dump" → **folded into** `career-profile` (its deep-interview path).
 - "grill me" technique → **extracted to** `references/interview-technique.md`.
 
 ## The three throughlines
 
 1. **`career-profile`** (state) — the shared context every skill reads.
-2. **`interview-technique.md`** (method) — the adaptive interview, reused by 4 skills.
+2. **`interview-technique.md`** (method) — the adaptive interview, reused by the
+   profile, clarity, review, check-in, win-log, and interview-prep flows.
 3. **`teal-mcp.md`** (data) — live market data with a no-MCP fallback; the moat *and*
    the compatibility guarantee.
 
@@ -64,14 +68,14 @@ Locked applications of the rule:
   ┌───────────┬──────────────┼───────────────┬────────────────┐
 SEARCHING   PIVOTING        GROWING         THRIVING        references
   │             │              │                │               │
-resume-review  career-clarity comp-analysis   win-log       interview-technique
+resume-review  career-clarity earn-more-plan  win-log       interview-technique
   │  └─rubric──┐   │ ↕ profile   ↑ ↓             ↓ ↑           ← career-profile(deep)
   ↓            │   ↓             │               │             ← performance-self-review
-tailor-to-job ─┘ skills-market- offer-review    performance-  ← career-clarity
+tailor-to-job ─┘ skills-market- comp-analysis   performance-  ← career-clarity
   │  └─teal-method  report       │              self-review   ← interview-prep
   ↓                  ↑           │  ┌──win-log──→ │
-interview-prep       │           │  │            career-checkin  teal-mcp
-  │                  │        difficult-          │             ← comp-analysis
+interview-prep       │        offer-review       career-checkin  teal-mcp
+  │                  │        difficult-          │             ← earn-more-plan
 job-application      │        conversation    network-          ← offer-review
   └─profile,tailor   │                        maintenance       ← skills-market-report
                      │                        (Teal CRM)        ← tailor-to-job
@@ -82,8 +86,8 @@ job-application      │        conversation    network-          ← offer-revi
 ```
 
 Read the arrows as "imports / feeds". `career-profile` sits above everything;
-`teal-mcp` feeds the four data-driven skills; `interview-technique` and `teal-method`
-are pulled in wherever the label appears on the right.
+`teal-mcp` feeds the data-driven skills; `interview-technique` and `teal-method` are
+pulled in wherever the label appears on the right.
 
 ## Compatibility layer
 

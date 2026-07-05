@@ -4,7 +4,9 @@ Semantic versioning. This file also carries a **rename map** so that when skills
 are consolidated or renamed, old install paths still resolve.
 
 ## [Unreleased]
-- Initial scaffold: architecture, 14 skill specs, three shared references, brief.
+- Initial scaffold: architecture, 15 skill specs, three shared references, brief.
+- Added `earn-more-plan` as a cross-mode money strategy skill with an interactive
+  HTML report deliverable.
 - Nothing shipped yet.
 
 ## Rename map
