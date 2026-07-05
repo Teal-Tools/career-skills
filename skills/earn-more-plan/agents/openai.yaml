@@ -1,0 +1,4 @@
+interface:
+  display_name: "Earn More Plan"
+  short_description: "Compare paths to higher compensation"
+  default_prompt: "Use $earn-more-plan to compare three realistic ways I could make more money."
