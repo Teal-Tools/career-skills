@@ -1,0 +1,10 @@
+# Runtime user data created by the skills — never commit personal career data
+.agents/career-profile.md
+.agents/win-log.md
+comp-analysis-*.html
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+node_modules/

@@ -1,0 +1,21 @@
+{
+  "name": "career-skills",
+  "version": "0.1.0",
+  "description": "AI agent skills for every stage of your career — searching, pivoting, growing, and thriving. A shared career-profile spine feeds resume, comp, and win-tracking skills. Built by Teal.",
+  "author": {
+    "name": "Teal",
+    "url": "https://tealhq.com"
+  },
+  "homepage": "https://github.com/Teal-Tools/career-skills",
+  "repository": "https://github.com/Teal-Tools/career-skills",
+  "license": "MIT",
+  "keywords": [
+    "career",
+    "resume",
+    "job-search",
+    "compensation",
+    "interview",
+    "professional-development",
+    "teal"
+  ]
+}

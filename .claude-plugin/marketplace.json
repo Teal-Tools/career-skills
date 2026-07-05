@@ -1,0 +1,24 @@
+{
+  "name": "career-skills",
+  "owner": {
+    "name": "Teal",
+    "email": "david.fano@tealhq.com"
+  },
+  "version": "0.1.0",
+  "description": "AI agent skills for every stage of your career — searching, pivoting, growing, and thriving. Built by Teal.",
+  "plugins": [
+    {
+      "name": "career-skills",
+      "source": "./",
+      "version": "0.1.0",
+      "description": "Composable skills unified by a shared career-profile: resume review, comp analysis, win logging, and more, across searching, pivoting, growing, and thriving.",
+      "keywords": [
+        "career",
+        "resume",
+        "job-search",
+        "compensation",
+        "professional-development"
+      ]
+    }
+  ]
+}
