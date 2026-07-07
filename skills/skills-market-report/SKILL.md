@@ -10,8 +10,10 @@ description: Use when the user has a current role plus a target title, occupatio
 and what proof would make me credible?"
 
 This skill should not crush exploratory energy with gatekeeping. It should separate
-real requirements from noisy wish lists, identify transferable advantages, and turn
-skill gaps into proof-building moves.
+real requirements from noisy wish lists, identify transferable advantages (the user's
+**Energizers**), and turn skill gaps (their **Potentials**) into proof-building moves.
+It frames the target through Teal's **Functions** and **4 G's** so "the market" resolves
+into a concrete function, level, and org type rather than a vague title.
 
 ## Inputs
 - `.agents/career-profile.md` if present: history, current role, skills, direction,
@@ -55,10 +57,19 @@ Read `.agents/career-profile.md`, `.agents/career-clarity.md`, and `.agents/win-
 if present.
 
 Clarify:
-- current role and level;
+- current role and level (IC / front-line manager / strategic leader);
 - target title(s) or candidate direction(s);
+- target **Function** — the grouping of skills the role belongs to (a Function nests
+  into sub-function → channel → platform); the title is the surface, the Function is
+  the substance;
+- which of the **4 G's** the target sits in — **Goods** (build the product/service for
+  customers), **Growth** (generate/grow revenue), **Gears** (run the business
+  internally), or **General** (spans all; startups favor generalists, big companies
+  favor specialists);
 - target location(s) and work setting;
-- desired company stage/environment;
+- desired company stage/environment and **org type** — Products (own IP), Services
+  (labor/expertise/time), Causes (non-profit); how an org makes money shows how it
+  invests in talent;
 - target domain or industry;
 - must-have constraints: comp floor, remote needs, timeline, credentials, risk
   tolerance.
@@ -67,19 +78,32 @@ If the user has only a vague direction, ask one narrowing question and pick a fi
 market scan. Example: "For the first scan, should we test product marketing, developer
 relations, or customer success strategy?"
 
-### Step 1 - Build the user's skill map
-Create a working map from profile, clarity brief, win log, resume, and interview.
+Alignment to keep in mind: the user's **Skills** (Energizers + Potentials) point to a
+**Function**; their **Interests + Knowledge** point to an **Industry**; together they
+define **organization fit**.
 
-Classify skills:
-- **Proven:** evidence-backed in work history or win log.
-- **Transferable:** proven in another context and plausibly useful in the target role.
-- **Emerging:** some evidence, but not enough market proof.
-- **Aspirational:** desired but not yet proven.
-- **Retire:** skills the user can do but does not want to keep selling.
+### Step 1 - Build the user's skill map
+Create a working map from profile, clarity brief, win log, resume, and interview. If
+`.agents/career-profile.md` or `.agents/career-clarity.md` already carries a **Skills
+Matrix**, start from it rather than rebuilding.
+
+Sort skills with the Teal **Skills Matrix** and note transferability for the target:
+- **Energizers** (skill + want more) → the strengths to lead with and get hired for.
+- **Potentials** (not yet a skill + want more) → what a pivot must grow into; these
+  become the roadmap.
+- **Assets** (skill + want less) → proven, usable if needed, but don't build the
+  target on them.
+- **Drainers** (not a skill + want less) → avoid; also a fit-risk signal if the target
+  demands them.
+
+For each, mark **transferable** (proven in another context and plausibly useful in the
+target) vs. needs-market-proof, and distinguish **natural strengths** (how the user is
+wired — from Work Style) from **acquired skills** (the resume is a database of these).
 
 Also capture:
-- domain expertise;
-- company-stage experience;
+- domain expertise and **Interests + Knowledge** (these point at Industry fit);
+- company-stage experience and level (IC / front-line manager / strategic leader);
+- generalist ("a little about a lot") vs. specialist ("a lot about a little") lean;
 - customer/user exposure;
 - tools and technical depth;
 - leadership and influence scope;
@@ -131,22 +155,29 @@ Separate:
 Compare market patterns against the user's skill map.
 
 Create:
-- **Transferable strengths:** evidence the user already has that the market values.
+- **Transferable strengths (Energizers that carry):** evidence the user already has
+  that the market values — the strengths to lead with.
 - **Positioning translations:** how to rename or frame current experience for the
-  target role.
-- **Skill gaps:** missing hard skills, domain exposure, tools, credentials, or proof.
+  target Function.
+- **Gaps (the Potentials to develop):** the market asks the user wants to grow into
+  but has not yet proven. Sort the fills by type: **knowledge gaps** (learn from
+  people/resources), **skill gaps** (formal or self-directed learning), **experience
+  gaps** (projects, volunteering, portfolio, thought leadership).
 - **Proof gaps:** skills the user may have but cannot yet demonstrate credibly.
-- **Fit risks:** role realities that may violate energizers/drainers, pace, company
-  stage, comp, lifestyle, or values.
-- **Better-fit variants:** adjacent titles or environments that preserve fit while
-  reducing gaps.
+- **Fit risks:** role realities that may violate the user's Drainers, values, pace,
+  company stage, comp, or lifestyle.
+- **Better-fit variants:** adjacent titles, Functions, or org types (Products /
+  Services / Causes) that preserve fit while reducing gaps.
 
 Be precise. Do not say "learn marketing." Say "build proof around positioning,
 launch messaging, customer segmentation, and sales enablement because these appear in
 18/31 sampled PMM postings."
 
 ### Step 5 - Build the roadmap
-Convert gaps into a 30/60/90-day roadmap.
+Convert the Potentials/gaps into a 30/60/90-day roadmap, matching each gap to its fill
+type — **knowledge gaps** to people/resources, **skill gaps** to formal or
+self-directed learning, **experience gaps** to projects, volunteering, a portfolio, or
+thought leadership.
 
 Each roadmap item should include:
 - target market signal;
@@ -196,13 +227,19 @@ _Generated: 2026-07-05 - maintained by the skills-market-report skill_
 ### Title Variants
 ### Work Environment Signals
 
-## Transferable Strengths
+## Target Function and Fit
+- Function / sub-function:
+- 4 G's (Goods / Growth / Gears / General):
+- Level (IC / front-line manager / strategic leader) and generalist vs. specialist:
+- Org type fit (Products / Services / Causes):
+
+## Transferable Strengths (Energizers that carry)
 | Market ask | User evidence | Positioning angle | Confidence |
 |---|---|---|---|
 
-## Gaps and Proof Gaps
-| Gap | Why it matters | Evidence needed | Roadmap move |
-|---|---|---|---|
+## Gaps and Proof Gaps (Potentials to develop)
+| Gap | Gap type (knowledge / skill / experience) | Why it matters | Evidence needed | Roadmap move |
+|---|---|---|---|---|
 
 ## Fit Risks
 - Drainer / constraint / environment mismatch:
@@ -258,10 +295,12 @@ After writing the report:
 > skills. ... I sampled 36 Teal postings from the last 60 days. The market repeatedly
 > asks for positioning, launch messaging, customer segmentation, sales enablement, and
 > cross-functional GTM. Your strongest transferable evidence is customer discovery,
-> roadmap narrative, and launch coordination; your proof gaps are sales enablement and
-> messaging artifacts. I wrote
+> roadmap narrative, and launch coordination (Energizers that carry); your Potentials
+> to develop are sales enablement and messaging artifacts. PMM sits in the Growth "G,"
+> specialist-leaning at bigger orgs. I wrote
 > `.agents/skills-market-report-product-marketing-manager-2026-07-05.md` with a
-> 30/60/90-day proof roadmap and three role variants to test.
+> 30/60/90-day proof roadmap — gaps sorted into knowledge / skill / experience fills —
+> and three role variants to test.
 
 ---
 

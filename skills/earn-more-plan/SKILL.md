@@ -122,31 +122,55 @@ Fallbacks:
 - public web search where available;
 - agent knowledge with clear caveats.
 
-### Step 3 - Generate the three plans
+### Step 3 - Generate the three plans (Teal's shift-difficulty ladder)
 Always produce three plans unless a user constraint makes one impossible. If one is
 ruled out, show it as "not viable under current constraints" and explain why.
 
-Plan A: **Grow on current path**
+The three plans map to Teal's **shift-difficulty ladder** — how hard a move is
+depends on how much of the user's *knowledge, function, and skills* has to change.
+The more that changes at once, the harder and slower the move:
+
+Plan A: **Grow on current path** — *easy: same knowledge*
 - Promotion, level-up, raise, internal transfer, scope expansion, or higher-paying
   version of the current function.
+- Same knowledge, same function — so the move is the lowest-difficulty on the ladder.
+  The primary lever is a **raise**, argued with Teal's **5 value levers**
+  (Knowledge, Network, Leadership, Growth, Savings — the case for why the user is
+  worth more).
 - Uses current wins, review evidence, next-level market band, level expectations, and
   internal strategy.
 - Good when the user has strong evidence, low risk tolerance, or high attachment to
   current craft/company.
 
-Plan B: **Change market, not identity**
+Plan B: **Change market, not identity** — *moderate: industry + function change*
 - Same or adjacent role at a higher-paying employer, domain, company tier, location,
   work setting, or compensation model.
+- On the ladder this is a market/context change (industry and/or function shift) with
+  the user's core skills intact.
 - Examples: larger company, AI/security/fintech domain, sales/OTE path, remote role in
   higher-paying market, relocation, smaller title at a better-paying company.
 - Good when the user's skill set is already marketable but current environment pays
   less.
 
-Plan C: **Build or pivot into higher upside**
+Plan C: **Build or pivot into higher upside** — *moderate-to-hard: adds new skills*
 - New skills, credential, school, portfolio, apprenticeship, adjacent function, or
   role family with higher compensation ceiling.
+- On the ladder, difficulty depends on what changes with the skills: **function +
+  skills = moderate** (adjacent pivot), while **knowledge + skills = hard** (a fuller
+  reinvention that takes longer and may cost a near-term dip).
 - Uses willingness to learn, pivot, relocate, change domains, or take a near-term dip.
 - Good when the current path has limited upside or the user wants a meaningful shift.
+
+For any plan that requires the user to close a distance to the target, use Teal's
+**gap-filling model** — name the gap type, then match it to how it's actually closed:
+- **Knowledge gaps** (you don't yet *know* something about the field/role) → close via
+  people and resources: informational interviews, reading, mentors.
+- **Skill gaps** (you can't yet *do* something) → close via learning, formal (courses,
+  credentials) or self-directed (practice, side projects).
+- **Experience gaps** (you haven't *done it in a real setting*) → close via projects,
+  volunteering, or a portfolio that proves the capability.
+Tag each plan's "skill/proof gaps" with which of these three it is, so the closing
+action is obvious and realistic.
 
 Each plan must include:
 - projected comp range by timeline (near-term, 12 months, 2-3 years);

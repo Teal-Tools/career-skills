@@ -13,6 +13,25 @@ change next.
 This skill should feel candid and grounding, not therapeutic, corporate, or
 performative. It validates feelings as data, then asks for proof.
 
+## Career Health: the frame for the check-in
+
+Teal treats the quarterly check-in as a **Career Health** review (Teal offers a
+Career Health Quiz built on the same idea). Rather than asking "is work fine?", it
+assesses health across a set of dimensions and flags where the user has drifted out
+of balance. The dimensions:
+
+- **Alignment** — does the work fit the user's **Values** and **Work Style**? (Use
+  the Values and Work Style captured in `career-profile` as the alignment yardstick.)
+- **Energy** — energizers vs. drainers: is the user gaining or losing energy from the
+  core of the role?
+- **Growth** — are they learning and building skills, or plateaued?
+- **Recognition & impact** — is real impact visible, evidenced, and rewarded?
+- **Comp / market position** — is pay and level keeping pace with the market?
+- **Relationships / network** — are the key relationships warm and intact?
+
+Every drift flag in this skill maps to one of these health dimensions, so the
+check-in reads as a coherent health review rather than a loose list of worries.
+
 ## Inputs
 - `.agents/career-profile.md` if present: current role, direction, constraints,
   energizers/drainers, open questions, and prior drift.
@@ -103,30 +122,43 @@ Self-gaslighting check:
 - If the user has no evidence either way, make the next action an evidence-gathering
   move, not a career decision.
 
-### Step 3 - Check alignment, energy, and drift
-Compare the period against the profile.
+### Step 3 - Run the Career Health review (alignment, energy, and drift)
+Assess the period across the Career Health dimensions, comparing against the profile.
+Use the user's **Values** and **Work Style** from `career-profile` as the alignment
+yardstick — "is this working?" is answered against what the user has said matters and
+how they work best, not against a generic ideal.
 
-Ask adaptively:
-- Which parts of the work gave you energy? Which parts drained you?
-- Are you learning, repeating, recovering, or deteriorating?
+Ask adaptively, one dimension at a time:
+- **Alignment:** Does the work still fit your Values and Work Style, or are you
+  bending against them? Which parts fit; which grate?
+- **Energy:** Which parts of the work gave you energy? Which parts drained you?
+- **Growth:** Are you learning, repeating, recovering, or deteriorating?
+- **Recognition & impact:** Is your impact visible and evidenced, or invisible?
+- **Comp / market:** Did your constraints or market position change: money, location,
+  caregiving, health, risk tolerance, visa, remote needs, timeline?
+- **Relationships:** Are the key relationships warm and intact, or cold and ambiguous?
 - Are you running toward this path, or staying because changing feels expensive?
-- Did your constraints change: money, location, caregiving, health, risk tolerance,
-  visa, remote needs, timeline?
 - Is the company giving you the environment required for the direction you wrote down?
 
-Flag drift only when there is a pattern, not a single bad week.
+Flag drift only when there is a pattern, not a single bad week. Each flag names the
+Career Health dimension it belongs to.
 
-Drift flags:
-- **Direction drift:** the current role no longer supports the target direction.
-- **Energy debt:** the user is consistently depleted by core parts of the role.
-- **Recognition gap:** impact exists, but visibility/reward is lagging.
-- **Evidence gap:** the user has strong feelings but thin proof.
-- **Scope stall:** the user wants growth, but ownership is not expanding.
-- **Trust risk:** company signals suggest reduced confidence or lower future scope.
-- **Comp/market drift:** pay or level may be falling behind the market; hand off to
-  `comp-analysis`.
-- **Relationship drift:** key relationships are cold or ambiguous; hand off to
-  `network-maintenance` or `difficult-conversation`.
+Drift flags (dimension in brackets):
+- **Direction drift** [Alignment]: the current role no longer supports the target
+  direction, Values, or Work Style.
+- **Energy debt** [Energy]: the user is consistently depleted by core parts of the role.
+- **Growth stall** [Growth]: the user is repeating rather than learning; skills aren't
+  developing.
+- **Recognition gap** [Recognition & impact]: impact exists, but visibility/reward is
+  lagging.
+- **Evidence gap** [Recognition & impact]: the user has strong feelings but thin proof.
+- **Scope stall** [Growth]: the user wants growth, but ownership is not expanding.
+- **Trust risk** [Recognition & impact]: company signals suggest reduced confidence or
+  lower future scope.
+- **Comp/market drift** [Comp / market]: pay or level may be falling behind the market;
+  hand off to `comp-analysis`.
+- **Relationship drift** [Relationships]: key relationships are cold or ambiguous; hand
+  off to `network-maintenance` or `difficult-conversation`.
 
 ### Step 4 - Decide the next 1-3 moves
 Translate the audit into concrete next actions. Keep them small enough to do in the
@@ -169,15 +201,18 @@ _Last updated: 2026-07-05 - maintained by the career-checkin skill_
 - Risk signals:
 - Unknowns to clarify:
 
-### Alignment Read
-- Direction:
-- Energy:
-- Constraints:
+### Career Health Read
+- Alignment (Values / Work Style):
+- Energy (energizers / drainers):
+- Growth (learning / skill development):
+- Recognition & impact:
+- Comp / market position:
+- Relationships / network:
 - Mode:
 
 ### Drift Flags
-- Recognition gap - evidence:
-- Evidence gap - evidence:
+- Recognition gap [Recognition & impact] - evidence:
+- Evidence gap [Recognition & impact] - evidence:
 
 ### Next Actions
 1. Action, owner, and date.

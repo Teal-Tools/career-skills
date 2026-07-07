@@ -27,7 +27,9 @@ them.** If the material is thin, that's the signal to grill harder, not to give 
 ## Deliverable (exactly one)
 `.agents/career-profile.md`, structured per `profile-schema.md` — identity, dated
 history with scope + wins, current situation, target direction/mode, constraints,
-energizers/drainers, wins pointer — plus a short woven career narrative.
+energizers/drainers, wins pointer — plus Teal's self-discovery artifacts: a **Work
+Style** sequence, **top-3 Values → motivation → vision**, a **Skills Matrix**
+(energizers / potentials), and a draft **Blurb**.
 
 ## Dependencies
 - `skills/career-profile/profile-schema.md` — the exact output shape and read/write
@@ -96,23 +98,63 @@ Now interview to fill the gaps, following `interview-technique`. Priorities:
   (%, $, time, quality). Fill the metrics the resume left out.
 - **Mine forgotten wins** — for each role: biggest thing shipped, hardest problem
   solved, what they were known for, any recognition. (This is the capabilities dump.)
-- **Follow energy** — note what the user lights up about vs. flattens on for a light
-  read on direction and energizers; hand deeper path-exploration to `career-clarity`.
+  Surface hidden skills from non-work life too — volunteering, side projects, and
+  what people naturally come to the user for.
+- **Follow energy** — note what the user lights up about vs. flattens on. This is the
+  raw material for the Skills Matrix below; hand deeper direction-exploration to
+  `career-clarity`.
 - **Know when to stop** — enough to fill the schema well, not an interrogation.
 
-### Step 5 — Weave the narrative & set direction
-Synthesize a short **career narrative** (the throughline connecting the roles — what
-the user is really good at and where it's compounding), a crisp **current situation**,
-and a **target direction** with the mode (searching / pivoting / growing / thriving).
-Optionally enrich the target role with market context via `teal-mcp` (fallback: skip
-or web-search). This narrative is what makes downstream skills feel like they know the
-person.
+### Step 5 — Self-discovery artifacts (Teal's method)
+From the interview and history, draft Teal's self-discovery outputs. These are
+*conversational reads*, not tests — the user is the authority on themselves; infer
+signals from evidence and check them, don't label the user as a fixed type.
+
+- **Work Style sequence.** Teal names four styles — everyone has all four; the
+  *sequence*, most-to-least, is what matters:
+  - **Director** — direct, assertive, goal-oriented; driven by power/authority; asks "What?"
+  - **Connector** — sociable, influencing, people-oriented; driven by interaction; asks "Who?"
+  - **Producer/Supporter** — supportive, patient, team-oriented; driven by collaboration; asks "How?"
+  - **Protector** — analytical, logical, detail-oriented; driven by systems; asks "Why?"
+
+  Infer the sequence from how the user describes their work: two axes sit behind it —
+  Shape vs. Stabilize the environment (fast vs. slow pace) × Seek Autonomy (cool) vs.
+  Seek Affiliation (warm). Note what "comes easy" vs. "takes effort" for them. To
+  surface blind spots, suggest the **Teal 360**: ask ~3 people who know them well to
+  describe their style. Record the sequence in the profile's Work Style section as
+  self-reported, with 360 flagged `to-confirm` if not yet done.
+- **Top-3 Values → motivation → vision.** Elicit values with **running toward /
+  running away**: what does the user want MORE of and LESS of? Cluster their statements
+  into themes and map to Teal's core value types — **Environment, Relationships,
+  Identity, Income, Balance, Purpose** (expanded: Autonomy, Creativity, Growth, Impact,
+  Leadership, Learning, Security, Team). Pick the top 3, then drive each to its **core
+  motivation with the 5 Whys** (ask "why?" until you hit the real driver). Finish with a
+  one-line **vision** for the next chapter: *"In your next role — what are you doing,
+  how are you feeling, what are you proud of?"* Keep it broad enough to explore
+  multiple paths.
+- **Skills Matrix.** Sort skills on a 2×2 — *is/isn't a skill* × *want more/want less*:
+  - **Energizers** (skill + want more) → what to get hired for; the focus.
+  - **Assets** (skill + want less) → use if needed.
+  - **Potentials** (not yet a skill + want more) → develop toward.
+  - **Drainers** (not a skill + want less) → avoid.
+
+  Distinguish **natural strengths** (they flow from the Work Style + 360) from
+  **acquired skills** (the resume is a database of these). Document macro → micro.
+- **Draft Blurb.** Weave a portable narrative: Experience + a memorable Achievement +
+  Skills + Work Style strengths. This becomes the resume summary, LinkedIn About,
+  networking intro, and "tell me about yourself" opener.
+
+Then set a crisp **current situation** and **target direction** with the mode
+(searching / pivoting / growing / thriving). Optionally enrich the target role with
+market context via `teal-mcp` (fallback: skip or web-search).
 
 ### Step 6 — Write the profile
-Write `.agents/career-profile.md` per `profile-schema.md`. Preserve prior user edits,
-merge rather than overwrite, carry `to-confirm` markers for anything still uncertain,
-and stamp the Meta section (date + this skill). Show the user the result and invite
-edits — it's their file.
+Write `.agents/career-profile.md` per `profile-schema.md` — landing the Work Style
+sequence, Values → Motivation → Vision, Skills (energizers / potentials / natural vs.
+acquired), History, and the draft Blurb in their schema sections. Preserve prior user
+edits, merge rather than overwrite, carry `to-confirm` markers for anything still
+uncertain (including a 360 not yet gathered), and stamp the Meta section (date + this
+skill). Show the user the result and invite edits — it's their file.
 
 ### Step 7 — Hand off
 Point to the natural next steps now that the spine exists: `win-log` (start capturing
@@ -145,9 +187,13 @@ and resume path is the standalone backbone.
 > your 2016–2021 stint at Acme looks like it was really three different titles, and
 > your current role has no end date — walk me through those? … Now, at Acme you wrote
 > "led platform work" — what did *you* build, and what did it move? … *(continues the
-> grill, one question at a time)* … Written to `.agents/career-profile.md`: dated
-> history with quantified scope, a 3-line narrative, and a "growing" target direction.
-> A few spots are marked to-confirm. Want to start a `win-log` next?
+> grill, one question at a time, then reads back a Work Style sequence, top-3 values,
+> and a Skills Matrix)* … Written to `.agents/career-profile.md`: dated history with
+> quantified scope, a Connector→Director→Protector→Producer work style, top values
+> (Impact, Growth, Balance) with the "why" under each, an energizers/potentials skills
+> matrix, a draft blurb, and a "growing" target direction. A few spots are marked
+> to-confirm — including a Teal 360 to check your work-style read. Want to start a
+> `win-log` next?
 
 ---
 

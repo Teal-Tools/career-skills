@@ -13,6 +13,23 @@ The stance is: do not undersell real impact, do not inflate weak evidence, and d
 turn a self-review into corporate fan fiction. The user should leave with a clear
 performance story, proof, misses, lessons, and a practical next-period plan.
 
+## Teal's Achievement Formula
+
+Contributions in this review are phrased using Teal's **Achievement Formula**, so each
+one reads as a proven achievement rather than a duty. Two complementary shapes:
+
+- **Skill + Proof** — name the skill, then the evidence that the user has it.
+- **Success Verb + Noun/Keyword + Metric + Outcome** — a strong action verb, the
+  concrete thing acted on, the number that sizes it, and the result it produced.
+  (e.g. "Reduced onboarding time [outcome] by cutting [verb] manual setup steps
+  [noun] 40% [metric]".)
+
+Forward-looking goals use the *same* formula, written as **future achievements** — the
+achievement the user intends to be able to claim next period. Before phrasing a goal,
+define the **intention / "why"** behind it, then make it **SMART** (specific,
+measurable, achievable, relevant, time-bound). A goal written this way is already
+shaped to become next period's evidence.
+
 ## Inputs
 - `.agents/career-profile.md` if present: role, level, current direction,
   constraints, energizers/drainers, and open questions.
@@ -130,12 +147,16 @@ Calibration checks:
 If the user provided review prompts, answer those prompts directly. Otherwise use the
 default structure:
 - **Summary:** one concise paragraph on the period.
-- **Top contributions:** 3-5 evidence-backed accomplishments.
+- **Top contributions:** 3-5 evidence-backed accomplishments, each phrased with the
+  **Achievement Formula** — Skill + Proof, or Success Verb + Noun/Keyword + Metric +
+  Outcome. Mark any missing number as `TODO` rather than inventing one.
 - **How I worked:** collaboration, leadership, ownership, communication, judgment.
 - **What I learned / where I grew:** real changes in behavior or skill.
 - **What did not go as planned:** misses, trade-offs, or unresolved work, framed with
   ownership and learning.
-- **Goals for next period:** 2-4 concrete goals with observable proof.
+- **Goals for next period:** 2-4 concrete goals, each written as a **future
+  achievement** — define the intention / "why" first, then phrase the goal in the
+  Achievement Formula and make it SMART, so its proof is observable by next period.
 - **Support / asks:** manager support, clarity, sponsorship, resources, or feedback
   needed.
 

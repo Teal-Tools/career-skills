@@ -10,7 +10,22 @@ this skill reads *real, current postings in bulk* and shows the user exactly whe
 sit and where the upside is. The output is a shareable HTML report they can sit with.
 
 The framing is always **informational, not directive** — it hands the user the market
-picture and the options; it never tells them what to do (see guardrails).
+picture and the options; it never tells them what to do (see guardrails). Comp is the
+user's decision to make; this skill exists to inform it.
+
+Teal's core view on comp shapes this skill: **compensation is far more than base
+salary.** A full read weighs five forms of comp, each carrying a different risk level —
+**Cash** (salary, hourly, sign-on; no risk), **Benefits** (low risk), **Variable**
+(bonuses, commission, profit sharing; mid risk), **Terms** (title, reporting line,
+start date, non-compete, severance; mid risk), and **Equity** (stock/options; high
+risk). This skill focuses on the market picture for Cash and Variable (what postings
+report), and frames the rest so the user knows the full package matters, not just the
+number on the range.
+
+Teal's second view: to know what you're *worth*, you first **define your market.**
+Comp is not one number — it moves across five levers: **Role & level, Location,
+Company, Industry, and Company stage.** The market picture below segments along these
+levers rather than reporting a single blended band.
 
 ## Inputs (need one; more is better)
 - **`.agents/career-profile.md`** if it exists — title, level, years of experience,
@@ -58,28 +73,43 @@ Follow the fallback ladder in `references/teal-mcp.md`:
 - **Web search** as the floor, clearly labeled as such.
 Always keep the running **sample size, source, and date**.
 
-### Step 3 — Build the market picture
-From the parsed sample, compute:
-- **Salary distribution** for the user's title + level: min / median / max and the
-  spread. Distinguish base vs OTE vs total where postings specify.
+### Step 3 — Build the market picture (define the market across Teal's five levers)
+From the parsed sample, compute the distribution and then segment it along the five
+levers that define the user's market — **Role & level, Location, Company, Industry,
+Company stage**:
+- **Salary distribution** for the user's title + level (**Role & level**): min / median
+  / max and the spread. Distinguish base vs OTE vs total where postings specify.
 - **Where the user sits** — place their current comp on that distribution (percentile /
   "you're at the 30th percentile for this role in your market").
 - **By location** — same title, which metros pay more (the remote/relocation lever).
 - **By company** — which companies/tiers cluster at the top (sets up the "step down in
   scope at a bigger company, up in comp" option); enrich with `research` if needed.
+- **By industry and company stage** — where the same title pays differently across
+  sectors and across startup vs. late-stage vs. public (equity-heavy early-stage comp
+  reads differently from cash-heavy public-company comp); segment where the sample
+  supports it, and note it as a lever even when the sample is too thin to quantify.
 - **Skill premium** — skills/keywords that appear more in the higher-paying postings
   than the lower ones (the "learn/emphasize X to move up a band" lever).
 
-### Step 4 — Frame the opportunities (three buckets)
-Translate the data into concrete, non-directive options:
-1. **More in your current title** — the gap between the user's comp and the market
-   median/top quartile for the *same* role/level/location, and what higher-payers ask
-   for that they could emphasize.
-2. **Step up** — the next title/level, its market band, and the delta.
-3. **Step down / lateral at a bigger company** — same or slightly narrower scope at a
-   larger or better-paying employer that still pays more; good for people optimizing
-   comp or stability over title.
-Present all three as options with numbers and trade-offs, not a recommendation.
+### Step 4 — Frame the opportunities (moving the levers)
+Each opportunity is just a different lever from Step 3 being pulled — same role at
+higher pay, a level change, or a change in company/industry/stage. Translate the data
+into concrete, non-directive options:
+1. **More in your current title** (holding all levers fixed) — the gap between the
+   user's comp and the market median/top quartile for the *same*
+   role/level/location/industry, and what higher-payers ask for that they could
+   emphasize.
+2. **Step up** (the **Role & level** lever) — the next title/level, its market band,
+   and the delta.
+3. **Change the market** (the **Company / Industry / Company-stage** levers) — same or
+   slightly narrower scope at a larger, better-paying employer, a higher-paying
+   industry, or a different company stage that still pays more; good for people
+   optimizing comp or stability over title. (The **Location** lever — remote or
+   relocation — is a fourth path surfaced in Step 3.)
+Present all three as options with numbers and trade-offs, not a recommendation — and
+remind the user that base is only one of the five forms of comp: a lower base with
+stronger equity, variable, benefits, or terms may net out ahead, and the decision is
+theirs.
 
 ### Step 5 — Generate the HTML report
 Write a single self-contained HTML file to the working directory. Suggested sections:
@@ -88,9 +118,10 @@ Write a single self-contained HTML file to the working directory. Suggested sect
 - **Where you stand** — current comp vs the market band, with a percentile call-out.
 - **Market range** — a simple inline-SVG bar/box showing min · median · max, current
   comp marked on it.
-- **Pay by location** and **pay by company** — small ranked bars.
+- **Pay by location, company, industry, and stage** — small ranked bars for the levers
+  the sample supports; note total comp is more than base (the five forms).
 - **Skill premium** — the skills concentrated in top-paying roles.
-- **Your three opportunities** — the buckets from Step 4, each with a number.
+- **Your three opportunities** — the levers from Step 4, each with a number.
 - **Sources & caveats** footer (see guardrails).
 Charts must be inline SVG (no CDN/JS dependency) so the file is portable and offline.
 
@@ -109,8 +140,11 @@ this data).
   A small or pasted sample must be labeled as such.
 - **Ranges over points.** Comp is a distribution; show the spread and the uncertainty.
 - **Distinguish base vs OTE vs total comp** — sales/OTE ranges will skew a naive average.
+- **Total comp is more than base.** Postings mostly report Cash (and sometimes
+  Variable); flag that Benefits, Terms, and Equity are part of the real package even
+  when they're not in the sample, so the user doesn't over-index on the base band.
 - **Don't fabricate.** If the data is thin, say so and narrow the claim rather than
-  inventing a band.
+  inventing a band. Keep any `[TBD]` / metric-TODO markers where a number isn't known.
 
 ## Teal MCP usage
 Core to the moat path but not required. `searchJobs` + `getJobDetails` aggregate the

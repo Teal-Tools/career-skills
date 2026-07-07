@@ -208,12 +208,12 @@ Report back what you find and pick symlink vs. sync before building more skills.
 
 ## 7. The full skill inventory (15 skills, by mode)
 
-Status legend: **[SPEC]** = stub exists, not yet built. Several skills are now built
-enough to use (`career-profile`, `win-log`, `comp-analysis`, `career-checkin`,
-`performance-self-review`, `career-clarity`, `skills-market-report`,
-`earn-more-plan`), while the rest remain stubs. See `docs/SKILL-INVENTORY.md` for
-current status and
-`docs/ARCHITECTURE.md` for the cross-reference diagram.
+**Update (2026-07-06): all 15 skills are built and carry Teal's actual methodology**
+— no remaining `[SPEC]` stubs, and the placeholder frameworks have been replaced with
+Teal curriculum content (Achievement Formula, Work Style, Values → Motivation → Vision,
+Skills Matrix, Total Comp = 5 forms, Job Posting Analysis, the 5 hiring stages, and
+more). See `docs/SKILL-INVENTORY.md` for status, `docs/ARCHITECTURE.md` for the
+cross-reference diagram, and `docs/TEAL-INPUT-AUDIT.md` (internal) for the source map.
 
 **Foundation**
 - `career-profile` — one-time interview → persistent `.agents/career-profile.md`.
@@ -337,16 +337,18 @@ career-skills/
 │   └── DECISIONS.md      ← the locked decisions + the two still open
 ├── references/
 │   ├── interview-technique.md  ← shared adaptive grill-me method
-│   ├── teal-mcp.md             ← [SPEC] job-data querying + fallback + tool list
-│   └── teal-method.md          ← [SPEC] TEAL bullet framework
-├── skills/<15 skills>/SKILL.md ← skill source files
+│   ├── teal-mcp.md             ← job-data querying + fallback + tool list
+│   └── teal-method.md          ← TEAL bullet framework (draft — see docs/DECISIONS.md)
+├── skills/<15 skills>/SKILL.md ← skill source files, all built
 ├── scripts/validate.mjs        ← dependency-free frontmatter/structure linter
-└── .claude-plugin/marketplace.json ← plugin install manifest stub
+├── scripts/sync.mjs            ← Windows/CI fallback for the symlink layout
+└── .claude-plugin/marketplace.json ← plugin install manifest
 ```
 
-Remaining `[SPEC]` files have clear TODO blocks describing what to build. This repo is
-still early, but the shared profile, win log, comp analysis, check-in, and interview
-technique are now concrete enough to build against.
+All 15 skills and all 3 shared references are built and carry Teal methodology as of
+2026-07-06. The remaining open items are tracked in `docs/DECISIONS.md` (the cross-CLI
+compatibility spike, the resume-review/tailor-to-job merge call, the plugin-marketplace
+schema check, and the unverified Teal MCP tool suites).
 
 ---
 

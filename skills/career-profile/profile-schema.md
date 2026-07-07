@@ -1,24 +1,52 @@
 # `.agents/career-profile.md` — Schema
 
-**Status: [SPEC].** This defines the persistent context file `career-profile` writes
-and every other skill reads. Keep it human-readable markdown (not JSON) so users can
-edit it and any CLI can parse it.
+This defines the persistent context file `career-profile` writes and every other skill
+reads. Keep it human-readable markdown (not JSON) so users can edit it and any CLI can
+parse it. The sections map directly to the outputs of Teal's self-discovery method
+(Work Style, Values → Motivation → Vision, Skills Matrix, the Blurb), so that whatever
+`career-profile` and `career-clarity` produce lands in a shape every other skill can
+read.
 
-## Proposed sections
+## Sections
+
 ```markdown
 # Career Profile
 
 ## Identity
 - Name, current title, company, location, years of experience
 
+## Work Style
+- Teal Work Style sequence, most-to-least (Director / Connector / Producer / Protector)
+- What energizes the user based on that sequence; environments/roles that fit it
+- (from career-profile / career-clarity; may be self-reported if no assessment taken)
+
+## Values → Motivation → Vision
+- Top 3 values (e.g. Environment, Relationships, Identity, Income, Balance, Purpose)
+- The motivation ("why") under each — the core driver
+- One-line vision for the next role / chapter
+- (from career-clarity)
+
+## Skills
+- Energizers (skill + want to do more of it) — what to get hired for
+- Assets (skill + want less), Potentials (not yet skilled + want to grow into)
+- Natural strengths vs. acquired skills; general (transferable) vs. specific
+- (from career-profile capabilities dump / career-clarity / skills-market-report)
+
 ## History
-- Roles (company, title, dates, scope, headline wins) — the capabilities-dump output
+- Roles (company, title, dates, scope, headline achievements) — the capabilities-dump output
+
+## Blurb
+- The user's portable narrative: Experience + a memorable Achievement + Skills + Work
+  Style strengths. Reused as resume summary, LinkedIn About, networking intro, and the
+  "tell me about yourself" opener.
+- (drafted here; refined by resume-review / interview-prep / network-maintenance)
 
 ## Current situation
 - Current role summary, level, comp (base / equity / bonus), satisfaction
 
 ## Direction
 - Target role(s) / title(s), target comp, timeline, mode (searching/pivoting/growing/thriving)
+- Shift difficulty if pivoting: easy (industry+function) / moderate (function+skills) / hard (knowledge+skills)
 
 ## Energizers & drainers
 - What lights the user up / flattens them (from career-clarity)
@@ -46,14 +74,21 @@ future runs (and `career-checkin`) a punch-list of what to chase down.
 
 ## Read/write contract
 - **Every skill reads this first** (if present).
-- **Writers:** `career-profile` (all), `career-clarity` (direction, energizers,
-  running toward/from), `win-log` (wins), `career-checkin` (meta, drift),
-  `earn-more-plan` (target comp, constraints, selected trajectory, if approved).
-- Any skill that learns something durable **offers** to update the relevant section —
-  it does not silently overwrite.
-- Preserve user edits; append/merge rather than clobber.
+- **Writers:**
+  - `career-profile` — all sections (owns Identity, Work Style, Skills, History, Blurb).
+  - `career-clarity` — Work Style, Values → Motivation → Vision, Direction, Energizers &
+    drainers, Running toward/from.
+  - `win-log` — Wins log pointer (and surfaces achievements that strengthen History/Blurb).
+  - `career-checkin` — Meta, drift notes, and updates to Current situation / Direction.
+  - `earn-more-plan` — target comp, constraints, selected trajectory (if approved).
+- Any skill that learns something durable **offers** to update the relevant section — it
+  does not silently overwrite.
+- **Merge behavior:** preserve user edits; append/merge rather than clobber. When a
+  field already has a value, propose the change and show old → new rather than
+  overwriting silently. Carry `to-confirm` and `metric TODO` markers forward until
+  resolved.
 
-## TODO
-- Finalize section list and field names.
-- Define the merge/update behavior precisely.
-- Decide file location convention across the five CLIs (confirm in the compat spike).
+### File location
+`.agents/career-profile.md` in the user's working directory. Every skill looks there
+first; if absent, the skill proceeds from pasted/described context and offers to create
+the profile.

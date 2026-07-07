@@ -2,15 +2,14 @@
 
 All 15 skills, grouped by mode. Current status:
 
-- **Built enough to use:** `career-profile`, `win-log`, `comp-analysis`,
-  `career-checkin`, `performance-self-review`, `career-clarity`,
-  `skills-market-report`, `earn-more-plan`.
-- **Still stubs:** `resume-review`, `tailor-to-job`, `interview-prep`,
-  `offer-review`, `job-application`, `difficult-conversation`,
-  `network-maintenance`.
+- **Built + Teal methodology pulled in:** all 15 skills have full `SKILL.md`
+  implementations and now carry Teal's actual frameworks (Achievement Formula, Work
+  Style, Values → Motivation → Vision, Skills Matrix, Total Comp = 5 forms, Job Posting
+  Analysis, the 5 hiring stages, the +2/+7/+14 networking cadence, Career Health, the
+  shift-difficulty ladder). `references/teal-method.md` is the Achievement Formula (no
+  longer a placeholder); `profile-schema.md` is locked. See `DECISIONS.md`.
 
-Build order is in `../CLAUDE.md` §7. The current growth-focused roadmap is in
-`ROADMAP.md`.
+Build order is in `../CLAUDE.md` §7.
 
 Columns: **Input** → what the user supplies · **Deliverable** → the single artifact ·
 **Deps** → skills/references it reads · **MCP** → how the Teal MCP enhances it.

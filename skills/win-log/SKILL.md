@@ -20,12 +20,14 @@ week?"). Feeds `resume-review`, `performance-self-review`, and `career-checkin`.
   week).
 
 ## Deliverable (exactly one)
-An updated `.agents/win-log.md` — dated, evidence-linked, TEAL-phrased wins, each with
-a ready-to-paste resume bullet — plus an offer to update `.agents/career-profile.md`.
+An updated `.agents/win-log.md` — dated, evidence-linked wins phrased with the
+**Achievement Formula**, each with a ready-to-paste resume bullet — plus an offer to
+update `.agents/career-profile.md`.
 
 ## Dependencies
-- `references/teal-method.md` — how to phrase a win (action + context + quantified
-  outcome). Cited so phrasing stays consistent with `resume-review`.
+- `references/teal-method.md` — the **Achievement Formula** for phrasing a win
+  (Achievement = Skill + Proof; Proof = Metric + Outcome). Cited so phrasing stays
+  consistent with `resume-review`.
 - `references/interview-technique.md` — the Phase 2 grill (one question at a time,
   quantify relentlessly, follow energy).
 - Reads/writes `.agents/career-profile.md` (the shared spine).
@@ -103,18 +105,27 @@ everything. Cover, adaptively (don't robotically ask all of these):
 - Note which wins the user lights up about — that's signal worth flagging in
   `career-profile` energizers (offer, don't auto-write).
 
-### Step 4 — Write it up (TEAL-phrased)
+### Step 4 — Write it up (Achievement Formula)
 For each confirmed win, write an entry in `.agents/win-log.md` using the format below.
-Phrase the resume-ready bullet with the TEAL method (`references/teal-method.md`):
-lead with a strong action verb, give the context/scope, end with the quantified
-outcome. If a win can't be quantified yet, keep it but mark the metric `TODO` so it
-nudges the user to find the number later. **Never invent numbers or recognition** —
-the log's entire value is that it's true.
+Phrase the resume-ready bullet with the **Achievement Formula**
+(`references/teal-method.md`): **Success Verb + Noun/Keyword + Metric + Outcome** —
+i.e. **Achievement = Skill + Proof**, where **Proof = Metric + Outcome**. A win with a
+metric but no outcome is trivia; an outcome with no metric is a claim — capture both.
+If a win can't be quantified yet, keep it but mark the metric `TODO` so it nudges the
+user to find the number later. When you tag a win, note whether the skill it proves is
+**general/transferable** (project management, communication, leadership — carries
+across roles) or **specific** (a tool, language, or function-bound competency); the
+distinction is what makes a win reusable when the user later pivots. **Never invent
+numbers or recognition** — the log's entire value is that it's true.
 
 ### Step 5 — Sync the spine & set the cadence
 1. Update the **Wins log pointer** in `.agents/career-profile.md` (last-updated date +
    a 2–3 line highlight reel of the period's best wins). Offer — don't force — to add
-   standout wins into the profile's History/Current-situation sections.
+   standout wins into the profile's History/Current-situation sections. Wins don't only
+   feed resume bullets: the strongest, most **measurable achievement** of a period is
+   exactly what the user's **Blurb** (their reusable resume summary / LinkedIn About /
+   "tell me about yourself" narrative — see `resume-review`) should lead with, so flag
+   a standout win as Blurb-worthy when one lands.
 2. Offer the weekly ritual: *"Want me to run this every Friday so wins never pile up?"*
    If the runtime supports scheduled tasks, set a weekly reminder to run win-log; if
    not, suggest the user add a recurring calendar nudge. (Scheduling is an optional,
@@ -140,6 +151,7 @@ _Last updated: 2026-07-04 · maintained by the win-log skill_
 - **Resume-ready bullet:** Redesigned user onboarding and automated provisioning,
   cutting setup time from 3 days to 4 hours for 200+ monthly users and reducing
   related support tickets 35%.
+- **Skill:** process redesign + automation (specific) · project management (transferable)
 - **Tags:** #shipped #impact · Growing
 
 ### Mentored two engineers through their first on-call rotation
@@ -148,11 +160,14 @@ _Last updated: 2026-07-04 · maintained by the win-log skill_
 - **Recognition:** ...
 - **Evidence:** ...
 - **Resume-ready bullet:** ...
+- **Skill:** mentoring / people development (transferable)
 - **Tags:** #leadership · Growing
 ```
 
 Guidelines: keep entries terse; the **resume-ready bullet** is the payload (it drops
-straight into `resume-review`). Preserve prior entries — append and merge, never
+straight into `resume-review`). The optional **Skill** line notes what ability the win
+proves and whether it's general/transferable or specific — useful when the wins later
+roll up into a Blurb or a pivot. Preserve prior entries — append and merge, never
 clobber. Carry `metric TODO` markers forward until the number is found.
 
 ## Guardrails

@@ -31,12 +31,34 @@ decision, move it up to Locked with a date and a one-line rationale.
   `npx skills add`, plugin marketplace, and git clone.
 - **Thriving ships in v1:** decided 2026-07-05. Ship at least `win-log` and
   `career-checkin` in v1 so the four-mode story is real at launch, not a promise.
+- **Symlink vs. sync script:** decided 2026-07-05 — symlinks (`.claude/skills` and
+  `.agents/skills` → `skills/`) are the default; `scripts/sync.mjs` mirrors
+  (copies) `skills/` into each target instead, for Windows/CI/zip flows where
+  symlinks are fragile. Same strategy either way, per CLAUDE.md §6.
+- **All 15 skills built:** as of 2026-07-05, every skill in the inventory has a
+  full `SKILL.md` (no remaining `[SPEC]` stubs).
+- **Teal methodology pulled in (2026-07-06):** the skills now carry Teal's actual
+  frameworks rather than placeholder stand-ins. `references/teal-method.md` is the
+  **Achievement Formula** (Skill + Proof; Proof = Metric + Outcome; bullet = Success
+  Verb + Noun/Keyword + Metric + Outcome) — the earlier invented "Task/Execution/
+  Amplifier/Lift" draft is gone. `skills/career-profile/profile-schema.md` is locked
+  (no `[SPEC]`) around Teal's self-discovery outputs (Work Style, Values → Motivation
+  → Vision, Skills Matrix, Blurb). Comp/offer use Total Comp = 5 forms; resume/JD use
+  the Achievement Formula + Job Posting Analysis; self-discovery uses Work Style /
+  Values / Skills Matrix / 4 G's; interview/network/growth carry the 5 hiring stages,
+  the +2/+7/+14 cadence, Career Health, and the shift-difficulty ladder. See
+  `docs/TEAL-INPUT-AUDIT.md` (internal — do not publish) for the source mapping.
 
 ## Open (resolve before v1 ships)
 
 1. **`resume-review` / `tailor-to-job` final merge call?** Recommendation: keep
    separate, share rubric. Revisit only if behavior converges.
-2. **Symlink vs. sync script** — decided by the §6 compatibility spike. Record the
-   result here.
+2. **Cross-CLI compatibility spike (§6) not yet run.** README claims the library
+   "runs on" Claude Code, Cowork, Codex, OpenClaw, and Hermes, but the symlink-vs-sync
+   spike has not been executed on those targets or on Windows. Verify before making the
+   five-CLI claim publicly.
 3. **Exact plugin-marketplace schema** — verify `.claude-plugin/marketplace.json`
-   against the current spec during the spike; update the stub.
+   against the current spec; it's still a stub that does not list the shipped skills.
+4. **Unverified Teal MCP tool suites.** Skills and footers reference `resume-*`,
+   `tracker-jobs-*`, and "Teal CRM" MCP tools that `references/teal-mcp.md` names but
+   does not document. Confirm they exist, or soften the capability promises.

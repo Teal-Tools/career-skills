@@ -14,10 +14,10 @@ Built by [Teal](https://tealhq.com)
 
 ---
 
-> **Status: early scaffold.** This repo is under active construction. The
-> architecture and skill inventory are locked; the skills themselves are being
-> built. See [`docs/`](./docs) for the full design and [`CLAUDE.md`](./CLAUDE.md)
-> for the build brief.
+> **Status: pre-release.** All 15 skills are built and carry Teal's methodology.
+> A few launch items remain before a public push (see [`docs/DECISIONS.md`](./docs/DECISIONS.md)) —
+> notably confirming cross-CLI compatibility and the plugin-install path. See
+> [`docs/`](./docs) for the full design and [`CLAUDE.md`](./CLAUDE.md) for the brief.
 
 ## What this is
 

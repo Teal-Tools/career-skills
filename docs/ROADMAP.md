@@ -9,21 +9,9 @@ Do not add a new skill when the workflow belongs inside an existing deliverable.
 
 ## Current state
 
-Built enough to use:
-- `career-profile` - shared career context and capabilities dump.
-- `win-log` - ongoing evidence capture and resume-ready wins.
-- `comp-analysis` - market-backed compensation report.
-- `earn-more-plan` - interactive money strategy report with three trajectories.
-- `career-checkin` - periodic reality check, evidence audit, drift flags, next moves.
-- `performance-self-review` - evidence-backed review draft with calibration notes.
-- `career-clarity` - pivot interview, candidate directions, market notes, experiments.
-- `skills-market-report` - market skill-gap report and proof-building roadmap.
-
-Still stubs:
-- Searching: `resume-review`, `tailor-to-job`, `interview-prep`, `offer-review`,
-  `job-application`.
-- Growing: `difficult-conversation`.
-- Thriving: `network-maintenance`.
+**All 15 skills are built and carry Teal's methodology** (as of 2026-07-06). Nothing in
+the inventory is a stub. The near-term work below is now about hardening and launch
+readiness, not building missing skills — see `docs/DECISIONS.md` for open launch items.
 
 ## Product loops
 
@@ -58,25 +46,24 @@ skill-gap, conversation, or search support.
 Purpose: keep warm relationships warm, notice relationship drift early, and prepare
 for high-stakes conversations before they become emergencies.
 
-## Near-term build order
+## Near-term work (hardening, not building)
+
+All skills exist; this is the pre-launch punch-list.
 
 1. **Harden the shared layer.**
-   - Finish `references/teal-method.md`.
-   - Finish `references/teal-mcp.md`.
-   - Keep `scripts/validate.mjs` green and extend it when new structure rules become
-     important.
+   - `references/teal-method.md` and `references/teal-mcp.md` are written; verify the
+     `teal-mcp.md` tool contract against the real MCP (esp. the `resume-*`,
+     `tracker-jobs-*`, and CRM suites).
+   - Keep `scripts/validate.mjs` green and extend it when new structure rules matter.
 
-2. **Complete the growth spine.**
-   - Build `difficult-conversation`: turns a clear desired outcome into framing,
-     talking points, anticipated pushback, and follow-up notes.
-   - Build `network-maintenance`: creates a reconnect list and lightweight outreach
-     drafts from profile/context.
+2. **Reduce duplication.** Work Style, the Skills Matrix, Total Comp = 5 forms, and the
+   shift-difficulty ladder are currently inlined across several skills. Consider
+   extracting the most-repeated ones into shared `references/` files (as
+   `interview-technique.md` already is) so they're defined once.
 
-3. **Fill table-stakes search flows.**
-   - Build `resume-review`, then `tailor-to-job`, then `interview-prep`.
-   - Build `offer-review` after `comp-analysis` and `difficult-conversation`.
-   - Leave `job-application` last because it depends most on computer-use runtime
-     details.
+3. **Launch readiness.** Run the cross-CLI compatibility spike; confirm the install
+   paths (`npx skills add`, plugin marketplace) actually resolve; reconcile marketing
+   claims (CLI list, MCP capabilities) with what's verified.
 
 ## Candidate additions to validate
 
