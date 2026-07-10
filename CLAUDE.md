@@ -206,14 +206,16 @@ Report back what you find and pick symlink vs. sync before building more skills.
 
 ---
 
-## 7. The full skill inventory (15 skills, by mode)
+## 7. The full skill inventory (16 skills, by mode)
 
-**Update (2026-07-06): all 15 skills are built and carry Teal's actual methodology**
-— no remaining `[SPEC]` stubs, and the placeholder frameworks have been replaced with
-Teal curriculum content (Achievement Formula, Work Style, Values → Motivation → Vision,
-Skills Matrix, Total Comp = 5 forms, Job Posting Analysis, the 5 hiring stages, and
-more). See `docs/SKILL-INVENTORY.md` for status, `docs/ARCHITECTURE.md` for the
-cross-reference diagram, and `docs/TEAL-INPUT-AUDIT.md` (internal) for the source map.
+**Update (2026-07-06): all 15 original skills are built and carry Teal's actual
+methodology** — no remaining `[SPEC]` stubs, and the placeholder frameworks have been
+replaced with Teal curriculum content (Achievement Formula, Work Style, Values →
+Motivation → Vision, Skills Matrix, Total Comp = 5 forms, Job Posting Analysis, the 5
+hiring stages, and more). **2026-07-10: `teal-mcp` added as skill #16 and v0.1.0
+tagged** (see `VERSIONS.md`). See `docs/SKILL-INVENTORY.md` for status,
+`docs/ARCHITECTURE.md` for the cross-reference diagram, and
+`docs/TEAL-INPUT-AUDIT.md` (internal) for the source map.
 
 **Foundation**
 - `career-profile` — one-time interview → persistent `.agents/career-profile.md`.
@@ -342,16 +344,17 @@ career-skills/
 │   ├── interview-technique.md  ← shared adaptive grill-me method
 │   ├── teal-mcp.md             ← job-data querying + fallback + tool list
 │   └── teal-method.md          ← TEAL bullet framework (draft — see docs/DECISIONS.md)
-├── skills/<15 skills>/SKILL.md ← skill source files, all built
+├── skills/<16 skills>/SKILL.md ← skill source files, all built
 ├── scripts/validate.mjs        ← dependency-free frontmatter/structure linter
 ├── scripts/sync.mjs            ← Windows/CI fallback for the symlink layout
 └── .claude-plugin/marketplace.json ← plugin install manifest
 ```
 
-All 15 skills and all 3 shared references are built and carry Teal methodology as of
-2026-07-06. The remaining open items are tracked in `docs/DECISIONS.md` (the cross-CLI
-compatibility spike, the resume-review/tailor-to-job merge call, the plugin-marketplace
-schema check, and the unverified Teal MCP tool suites).
+All 16 skills and all 3 shared references are built and carry Teal methodology;
+v0.1.0 was tagged 2026-07-10 (`VERSIONS.md` has the changelog). The remaining open
+items are tracked in `docs/DECISIONS.md` (the cross-CLI compatibility spike, the
+resume-review/tailor-to-job merge call, and the unverified Teal MCP tool suites —
+the plugin-marketplace schema check is resolved: schema-valid, skills auto-discovered).
 
 ---
 

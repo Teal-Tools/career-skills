@@ -35,8 +35,15 @@ decision, move it up to Locked with a date and a one-line rationale.
   `.agents/skills` → `skills/`) are the default; `scripts/sync.mjs` mirrors
   (copies) `skills/` into each target instead, for Windows/CI/zip flows where
   symlinks are fragile. Same strategy either way, per CLAUDE.md §6.
-- **All 15 skills built:** as of 2026-07-05, every skill in the inventory has a
-  full `SKILL.md` (no remaining `[SPEC]` stubs).
+- **All skills built:** as of 2026-07-05, every skill in the inventory has a full
+  `SKILL.md` (no remaining `[SPEC]` stubs). 2026-07-10: `teal-mcp` (MCP setup +
+  verification) added as skill #16; **v0.1.0 tagged** — see `VERSIONS.md`.
+- **Plugin-marketplace schema (resolved 2026-07-09):** `.claude-plugin/marketplace.json`
+  verified against the official plugin-marketplace docs — schema-valid as-is; the spec
+  **auto-discovers `skills/` from the plugin root** and does not want skills enumerated
+  in the manifest, so "list the shipped skills" was a non-requirement. Optional
+  polish (a `plugin.json`, `homepage`/`license` fields, a `renames` map) noted for
+  later.
 - **Teal methodology pulled in (2026-07-06):** the skills now carry Teal's actual
   frameworks rather than placeholder stand-ins. `references/teal-method.md` is the
   **Achievement Formula** (Skill + Proof; Proof = Metric + Outcome; bullet = Success
@@ -57,8 +64,11 @@ decision, move it up to Locked with a date and a one-line rationale.
    "runs on" Claude Code, Cowork, Codex, OpenClaw, and Hermes, but the symlink-vs-sync
    spike has not been executed on those targets or on Windows. Verify before making the
    five-CLI claim publicly.
-3. **Exact plugin-marketplace schema** — verify `.claude-plugin/marketplace.json`
-   against the current spec; it's still a stub that does not list the shipped skills.
-4. **Unverified Teal MCP tool suites.** Skills and footers reference `resume-*`,
+3. **Unverified Teal MCP tool suites.** Skills and footers reference `resume-*`,
    `tracker-jobs-*`, and "Teal CRM" MCP tools that `references/teal-mcp.md` names but
-   does not document. Confirm they exist, or soften the capability promises.
+   does not document. Resolution path exists: run the `teal-mcp` skill with a real
+   Teal login — its verify step lists the live tools and reconciles them against the
+   reference. Until then, confirm they exist or soften the capability promises.
+4. **`docs/TEAL-INPUT-AUDIT.md` is tracked but internal.** Remove it from the repo
+   (and from git history) before any public push, or explicitly bless it as
+   publishable.

@@ -2,7 +2,7 @@
 
 All 16 skills, grouped by mode. Current status:
 
-- **Built + Teal methodology pulled in:** all 15 skills have full `SKILL.md`
+- **Built + Teal methodology pulled in:** all 16 skills have full `SKILL.md`
   implementations and now carry Teal's actual frameworks (Achievement Formula, Work
   Style, Values → Motivation → Vision, Skills Matrix, Total Comp = 5 forms, Job Posting
   Analysis, the 5 hiring stages, the +2/+7/+14 networking cadence, Career Health, the

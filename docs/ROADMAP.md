@@ -9,9 +9,10 @@ Do not add a new skill when the workflow belongs inside an existing deliverable.
 
 ## Current state
 
-**All 15 skills are built and carry Teal's methodology** (as of 2026-07-06). Nothing in
-the inventory is a stub. The near-term work below is now about hardening and launch
-readiness, not building missing skills — see `docs/DECISIONS.md` for open launch items.
+**All 16 skills are built and carry Teal's methodology** (15 as of 2026-07-06;
+`teal-mcp` added 2026-07-10 with the v0.1.0 tag). Nothing in the inventory is a stub.
+The near-term work below is now about hardening and launch readiness, not building
+missing skills — see `docs/DECISIONS.md` for open launch items.
 
 ## Product loops
 

@@ -14,10 +14,11 @@ Built by [Teal](https://tealhq.com)
 
 ---
 
-> **Status: pre-release.** All 16 skills are built and carry Teal's methodology.
-> A few launch items remain before a public push (see [`docs/DECISIONS.md`](./docs/DECISIONS.md)) —
-> notably confirming cross-CLI compatibility and the plugin-install path. See
-> [`docs/`](./docs) for the full design and [`CLAUDE.md`](./CLAUDE.md) for the brief.
+> **Status: v0.1.0.** All **16 skills are built** — no stubs — and carry Teal's
+> methodology (see [`VERSIONS.md`](./VERSIONS.md) for the changelog). A few launch
+> items remain before a public push, notably confirming cross-CLI compatibility —
+> tracked in [`docs/DECISIONS.md`](./docs/DECISIONS.md). See [`docs/`](./docs) for
+> the full design and [`CLAUDE.md`](./CLAUDE.md) for the brief.
 
 ## What this is
 
