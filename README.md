@@ -119,6 +119,22 @@ Use a skill by asking your agent for it directly, for example:
 
 ## Install
 
+### Claude Desktop & claude.ai (no terminal needed)
+
+Each skill is packaged as a zip you upload straight into Claude — no CLI, no git:
+
+1. Download the skill's zip from the [latest release](https://github.com/Teal-Tools/career-skills/releases)
+   (e.g., `resume-review.zip`) — grab only the ones you want.
+2. In Claude (desktop app or claude.ai): **Settings → Capabilities → Skills →
+   Upload skill**, and pick the zip. (Custom skills are available on paid Claude plans.)
+3. Ask for it by name: *"Review my resume"* — Claude finds the skill on its own.
+
+Each zip is self-contained (shared references are bundled in), so skills work
+individually; install `career-profile` too and they start compounding.
+Building from source: `node scripts/package.mjs` emits all 16 zips to `dist/`.
+
+### CLIs & agent harnesses
+
 ```bash
 # Add the whole library
 npx skills add Teal-Tools/career-skills

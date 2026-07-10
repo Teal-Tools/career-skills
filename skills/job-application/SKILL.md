@@ -12,8 +12,8 @@ least one free-response box. This skill walks that form end to end, backed by th
 user's `career-profile` and a `tailor-to-job` resume, and stops at a final review
 before anything is ever sent.
 
-This is deliberately the **last skill built and the most environment-dependent** one
-in the library (see `../../CLAUDE.md` §7). Filling a real form requires either
+This is deliberately the **most environment-dependent** skill
+in the library. Filling a real form requires either
 browser/computer-use control (which most runtimes don't have) or a manual hand-off.
 Both paths are first-class here — this is not a "computer-use or nothing" skill.
 
@@ -69,7 +69,7 @@ user isn't left guessing whether anything was actually submitted.
 - Everything past this point is **environment-dependent by design** — the actual
   browser/form-filling mechanics vary by whichever computer-use capability the
   runtime exposes (Codex computer-use, Claude Cowork, Claude Chrome-style tools, or
-  none at all). Per `../../CLAUDE.md` §9's LCD guardrail, the *core* workflow below
+  none at all). Per the library's lowest-common-denominator rule, the *core* workflow below
   (read profile → get tailored resume → map every field → review → confirm →
   act) is written environment-agnostically; only Step 3's branch is CLI-specific.
 

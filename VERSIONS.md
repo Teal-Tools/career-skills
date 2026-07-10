@@ -4,7 +4,11 @@ Semantic versioning. This file also carries a **rename map** so that when skills
 are consolidated or renamed, old install paths still resolve.
 
 ## [Unreleased]
-- _Nothing yet._
+- Claude Desktop / claude.ai distribution: `scripts/package.mjs` packages each
+  skill as a self-contained upload-ready zip (shared references vendored in,
+  self-paths rewritten) → `dist/*.zip`; README gained a no-terminal install
+  section. Removed `job-application`'s repo-root `../../CLAUDE.md` pointers
+  (portability fix).
 
 ## [0.1.0] — 2026-07-10
 

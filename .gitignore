@@ -3,6 +3,9 @@
 .agents/win-log.md
 comp-analysis-*.html
 
+# Build output (per-skill zips for Claude Desktop / claude.ai)
+dist/
+
 # OS / editor cruft
 .DS_Store
 Thumbs.db
