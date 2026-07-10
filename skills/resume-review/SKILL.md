@@ -31,8 +31,13 @@ the deliverable either way; the file is a convenience, not a second artifact.
 
 ## Dependencies
 - `references/teal-method.md` — the **Achievement Formula** (Achievement = Skill +
-  Proof; Proof = Metric + Outcome) that Dimension 1 of the rubric is built on, and the
-  **ATS-myth** section that Dimension 4's guidance must match exactly.
+  Proof; Proof = Metric + Outcome) that Dimension 1 of the rubric is built on, the
+  **quantification fallback ladder** used in rewrites, and the **ATS-myth** section
+  that Dimension 4's guidance must match exactly.
+- `skills/resume-review/calibration.md` — career-stage, industry, and education
+  calibration: what the rubric's expectations look like for a new grad vs. a senior
+  exec, a trades resume vs. a consulting one. Detect context first (Step 1), then
+  score against the right column.
 - Reads `.agents/career-profile.md` if present; offers to note recurring weak spots
   (e.g., "consistently under-quantifies") back into it after the review.
 
@@ -50,7 +55,12 @@ MCP.)
 > reading that skill: **this is the rubric** — score resumes the same way in both
 > places.
 
-Five dimensions, summing to **/100**. Score each independently, then total.
+Five dimensions, summing to **/100**. Score each independently, then total. The
+dimensions never change, but **what earns a given band does** — calibrate every
+dimension to the career stage, industry, and education profile detected in Step 1
+(see `skills/resume-review/calibration.md`). A retail resume doesn't need finance-grade
+quantification to score well on Dimension 1; education leading the page is correct
+for a new grad and a flag for a 15-year VP.
 
 ### 1. Impact & Quantification — /35 (the Achievement Formula)
 The single biggest driver of resume quality. Companies want to hire you for what you
@@ -133,17 +143,42 @@ useful to the user than the number alone.
 
 ## Workflow
 
-### Step 1 — Orient
+### Step 1 — Orient and detect context
 Read `.agents/career-profile.md` if it exists (target direction, level, YOE) to
 calibrate Dimensions 3 and 5. If it's missing, proceed anyway — score what's on the
 page. If the resume can't be parsed cleanly (garbled PDF extraction, an image that
 doesn't OCR well), ask the user to paste the text rather than scoring a mangled
 extraction.
 
+Then detect the three calibration dimensions from the resume itself (see
+`skills/resume-review/calibration.md`):
+- **Career stage** — *calculate* it from the work history (earliest relevant
+  professional start date to present, rounded to whole years; never assume from
+  education dates or titles): New Grad (0–1), Early Career (1–5), Mid-Career (6–15),
+  Senior (15+).
+- **Industry family** — infer from titles, companies, and skills: knowledge work
+  (tech, finance, consulting, marketing), service/retail, skilled trades, or creative.
+- **Education profile** — traditional degree, alternative credentials
+  (bootcamp/certifications), or no formal credentials.
+
+State the detected context in the review header so the user can correct it — a wrong
+stage read miscalibrates everything downstream.
+
 ### Step 2 — Extract and inventory
 Pull out every bullet, by role, plus the overall structure (sections, order, contact
 info, file format/layout). This inventory is what Step 3 scores against — don't skip
 straight to a gut-feel number.
+
+While inventorying, map capabilities **across** positions, not just within them:
+- **Cross-resume redundancy** — flag any skill or achievement theme appearing 3+
+  times; the same capability told five ways is one achievement and four wasted lines.
+  Note consolidation opportunities for Step 4.
+- **Per-position cohesion** — do each role's bullets tell one story of what the person
+  owned there, or repeat a theme while leaving obvious achievement types (money saved,
+  people led, things built) unrepresented?
+- **Structural red flags** — multiple intro sections (Summary + Highlights + Core
+  Competencies is one section written three times), a skills list at both top and
+  bottom (consolidate to one), an objective statement where a Blurb should be.
 
 ### Step 3 — Score against the rubric
 Score each of the five dimensions above independently with a one-line justification
@@ -155,8 +190,11 @@ no scope or outcome" beats "Impact: needs work."
 Rank the fixes by score impact, worst dimension first. For **Impact & Quantification**
 specifically, rewrite the 3–5 weakest bullets in full Achievement Formula form
 (**Success Verb + Noun/Keyword + Metric + Outcome**) and show them as before/after.
-Where a real number isn't in the resume or given by the user, don't invent one — write
-the bullet with the skill and outcome in place and mark the missing metric
+Where a real number isn't in the resume or given by the user, don't invent one — walk
+the **quantification fallback ladder** in `references/teal-method.md` (exact → range →
+hedged estimate → comparison/rank → qualitative proof) and stop at the first rung the
+user can defend in an interview; if none holds, write the bullet with the skill and
+outcome in place and mark the missing metric
 `[metric TODO — ask: what was the before/after?]`, and ask the user for it. If the
 resume has a weak or generic summary, rewrite it as a proper **Blurb** (experience +
 one measurable achievement + skills + work style). Cover Clarity, Seniority,
@@ -169,7 +207,12 @@ Master Resume is a working record, not a formatted artifact; it's the source you
 from, so it never has to be reconstructed from memory under deadline.
 
 ### Step 5 — Deliver and offer next steps
-Present the score, the breakdown, and the rewrites in chat. Ask if the user wants it
+Present the score, the breakdown, and the rewrites in chat, leading with the detected
+context (stage / industry / education) so a misread is caught immediately. Close with
+2–3 **learning points** — the principles behind the biggest fixes, stated so the user
+can apply them without the review next time ("teach, don't just fix": a bullet needs a
+metric *and* the outcome it drove; your summary should never repeat a Position-1
+bullet). Ask if the user wants it
 saved to `resume-review-<date>.md` for reference. If a pattern is clear and durable
 (e.g., "consistently skips quantification" or "undersells scope"), offer — don't
 force — to note it in `.agents/career-profile.md` so future skills account for it.
@@ -188,6 +231,13 @@ Point to related skills where useful: `tailor-to-job` (once there's a target JD)
   stuffing is not a real tactic — don't recommend it.
 - **Evidence over vibes.** Every score and every rewrite should point at something
   specific in the resume, not a general impression.
+- **Preserve career progression.** Never suggest removing positions that show
+  promotion within the same company — progression is some of the strongest evidence a
+  resume can carry. Trim by *progressive bullet reduction* instead: most recent role
+  4–5 bullets, the one before 2–3, earlier roles 1 bullet or title/dates only.
+- **Don't flag what isn't broken.** Multiple positions at the same company (valuable
+  progression), older positions with no bullets (correct, not lazy), and two pages for
+  an experienced professional (appropriate) are features, not findings.
 - **The user's resume, the user's calls.** Offer rewrites as suggestions to accept,
   edit, or decline — don't silently rewrite the whole document.
 

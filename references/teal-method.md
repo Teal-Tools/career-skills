@@ -80,20 +80,63 @@ parts that actually prove the skill.
 - **Length:** one line on a resume (~200 characters). Win-log entries can run longer,
   carrying the full skill/metric/outcome breakdown plus a distilled resume-ready bullet.
 
+## Quantifying without fabricating (the fallback ladder)
+
+The metric is the part people skip — usually because they don't remember the exact
+number, not because there wasn't one. Never invent a figure, but don't drop the bullet
+either. Walk down this ladder and stop at the first rung the user can defend in an
+interview:
+
+1. **Exact number** — "grew ARR from $1.2M to $1.6M." Best; use when known.
+2. **Honest range** — "managed a $3–5M annual budget," "led a team of 8–12 depending
+   on project." A defensible range beats a fake-precise point.
+3. **Hedged estimate** — "approximately doubled lead generation," "cut processing time
+   by roughly half." Only if the user can explain how they'd estimate it.
+4. **Comparison or rank** — "ranked #2 of 15 reps," "converted 35% of leads vs. a 20%
+   team average." Relative numbers are often easier to recall and just as convincing.
+5. **Qualitative proof** — "promoted twice in 18 months," "selected to lead the pilot
+   based on track record." Recognition is evidence too.
+6. **`metric TODO`** — flag it and ask (see `win-log`). The bullet ships with skill and
+   outcome in place; the number gets hunted down later.
+
+Anti-patterns to flag, not encourage:
+- **Quantified trivia** — "attended 47 meetings per month" is a number, not an
+  achievement. If the metric doesn't prove a skill, cut it.
+- **Suspicious precision** — "improved efficiency by exactly 37.5%" reads as
+  manufactured. "Roughly 35–40%" is more credible *and* more honest.
+- **Metric without context** — "managed $10M budget" says less than "managed $10M
+  annual marketing budget, the company's largest, at 4.2x ROI." Context is what makes
+  a number mean something.
+- **One note repeated** — five revenue bullets in a row is one achievement type told
+  five times. Vary the proof: revenue, cost, time, scale, quality.
+
 ## The ATS myth (say this plainly when it comes up)
 
 Modern applicant tracking systems are databases and keyword filters, not the
-"resume-rejecting robots" folklore suggests. Give accurate guidance:
+"resume-rejecting robots" folklore suggests. The famous "75% of resumes are
+auto-rejected by ATS" statistic traces to a vendor (Preptel) that went out of business
+in 2013 — no study supports it, and the humans who run these systems say the opposite
+(Greenhouse's CEO: "The idea that the ATS is this mythical, genius, AI-infused tool is
+crazy"). Auto-rejections that do happen come from recruiter-defined knockout questions
+(work authorization, required license), not algorithmic judgment of resume quality.
+Give accurate guidance:
 
 - **True:** an ATS lets recruiters filter and search by keyword, skill, title, and
   years of experience. If you don't mirror the language the posting uses (in real
   bullets and a skills section), a human may never search you up.
-- **True:** unusual formatting — tables, text boxes, headers/footers, multiple columns,
-  graphics-as-text, non-standard fonts — can break parsing and scramble your content.
-  This is a real, mechanical risk.
+- **True:** unusual formatting can break parsing and scramble your content. The real
+  mechanical breakers: **text boxes** (garbled or reordered output), **text embedded in
+  images** (invisible to the parser), **contact info placed only in a header/footer**
+  (many systems skip those regions entirely — keep it in the document body),
+  **non-standard section names** ("My Professional Journey" instead of "Work
+  Experience"), and **scanned/image-based PDFs**. Multi-column layouts are a
+  *degradation*, not a rejection — parse accuracy drops a few points versus
+  single-column — so single-column is the safe default, not a superstition.
 - **False:** there is no secret algorithm that auto-rejects resumes below a score in the
   way the myth claims. Invisible keyword-stuffing (white text, hidden repetition)
-  doesn't fool a real recruiter and reads as dishonest if noticed.
+  doesn't fool a real recruiter — parsed text loses its color, so the recruiter sees it
+  plainly — and reads as dishonest. PDFs parse fine in modern systems (and preserve
+  formatting better than DOCX); any standard professional font is safe.
 - **Guidance to give:** mirror the posting's language naturally (title, tools, skills)
   in genuine achievement bullets and a skills section; use standard section headers and
   a single-column, text-based layout; save in the format the application asks for
