@@ -1,8 +1,13 @@
 # Reference: Teal MCP (job-market data) + graceful fallback
 
 **Status: BUILT (v1). Imported by `earn-more-plan`, `comp-analysis`, `offer-review`,
-`skills-market-report`, `tailor-to-job`. This is both the moat and the cross-CLI
+`skills-market-report`, `tailor-to-job`, `career-profile`, `career-clarity`,
+`interview-prep`, and `job-application`. This is both the moat and the cross-CLI
 compatibility guarantee.**
+
+**Setup lives in `skills/teal-mcp/`** — server URL `https://mcp.tealhq.com/mcp`,
+free Teal account, OAuth login, no API keys. This reference covers *usage*; send
+users there for *connection*.
 
 ## The rule
 Every skill that uses this reference MUST work without the MCP. The MCP is an upgrade,
@@ -11,6 +16,8 @@ not a requirement. Fallback ladder, best → worst:
 ```
 if Teal MCP is available:
     aggregate live postings (searchJobs → getJobDetails) — the moat path
+elif the user is open to a one-time setup (~2 min):
+    offer the `teal-mcp` skill to connect it, then take the moat path
 elif the runtime can browse (Codex computer-use / Claude Chrome tools):
     fetch a handful of postings from a job board and parse them
 elif the user can paste postings / comp data:

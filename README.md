@@ -14,7 +14,7 @@ Built by [Teal](https://tealhq.com)
 
 ---
 
-> **Status: pre-release.** All 15 skills are built and carry Teal's methodology.
+> **Status: pre-release.** All 16 skills are built and carry Teal's methodology.
 > A few launch items remain before a public push (see [`docs/DECISIONS.md`](./docs/DECISIONS.md)) —
 > notably confirming cross-CLI compatibility and the plugin-install path. See
 > [`docs/`](./docs) for the full design and [`CLAUDE.md`](./CLAUDE.md) for the brief.
@@ -27,7 +27,8 @@ produces one clear deliverable — review a resume, prep for an interview, bench
 your comp, run an honest self-review, keep your network warm.
 
 Skills work standalone with information you paste in, and get sharper when connected
-to the **[Teal MCP](https://tealhq.com)** for live, aggregated job-market data.
+to the **[Teal MCP](https://tealhq.com)** for live, aggregated job-market data —
+see [Connect the Teal MCP](#connect-the-teal-mcp-live-market-data) below.
 
 ## The four modes
 
@@ -74,6 +75,7 @@ Use a skill by asking your agent for it directly, for example:
 | Skill | What it is for | Example use |
 |------|----------------|-------------|
 | `career-profile` | Creates the persistent `.agents/career-profile.md` context every other skill reads. Best first step if the user has a resume, LinkedIn export, or messy career history. | `Use $career-profile to build my profile from my resume and LinkedIn export.` |
+| `teal-mcp` | Connects the Teal MCP (live job-market data) to your client — free account, OAuth login, no API keys — and verifies it with a real query. | `Use $teal-mcp to hook up live job-market data.` |
 
 ### Money / Cross-mode
 
@@ -128,6 +130,31 @@ git clone https://github.com/Teal-Tools/career-skills
 ```
 
 Skills are also installable individually — grab only the ones you need.
+
+## Connect the Teal MCP (live market data)
+
+Every data-driven skill works with data you paste in — and gets much sharper connected
+to the **Teal MCP**: live, aggregated job postings (last 60 days) powering comp
+benchmarks, offer reviews, skill-gap reports, and pay plans.
+
+All you need is a **free [Teal](https://tealhq.com) account** and the server URL:
+
+```
+https://mcp.tealhq.com/mcp
+```
+
+- **Claude Code:** `claude mcp add --transport http teal https://mcp.tealhq.com/mcp`,
+  then `/mcp` to log in
+- **Claude (claude.ai / desktop / Cowork):** Settings → Connectors → Add custom
+  connector → paste the URL
+- **ChatGPT:** Settings → Apps & Connectors → create a custom connector with the URL
+  (enable Developer mode if it's not visible)
+- **Codex, OpenClaw, Hermes & other MCP clients:** add a remote (streamable HTTP)
+  server named `teal` pointing at the URL
+
+Auth is a browser OAuth login — no API keys. Or just ask your agent:
+`Use $teal-mcp to set up live job-market data` — it configures, authenticates, and
+verifies the connection for you.
 
 ## Design docs
 

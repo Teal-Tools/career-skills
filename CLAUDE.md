@@ -218,6 +218,9 @@ cross-reference diagram, and `docs/TEAL-INPUT-AUDIT.md` (internal) for the sourc
 **Foundation**
 - `career-profile` — one-time interview → persistent `.agents/career-profile.md`.
   Absorbs the capabilities-dump idea. **BUILD FIRST.**
+- `teal-mcp` *(added 2026-07-10, skill #16)* — connect `https://mcp.tealhq.com/mcp`
+  to the user's client (free Teal account, OAuth, no keys) and verify it live.
+  The setup half of the moat; `references/teal-mcp.md` remains the usage half.
 
 **Money / cross-mode**
 - `earn-more-plan` — compare three realistic ways to make more money: grow on current

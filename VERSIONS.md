@@ -7,6 +7,11 @@ are consolidated or renamed, old install paths still resolve.
 - Initial scaffold: architecture, 15 skill specs, three shared references, brief.
 - Added `earn-more-plan` as a cross-mode money strategy skill with an interactive
   HTML report deliverable.
+- Added `teal-mcp` (16th skill): connect + verify the Teal MCP in any client;
+  README gained a "Connect the Teal MCP" section and the shared reference's
+  fallback ladder now offers setup before pasted data.
+- Added context calibration (`skills/resume-review/calibration.md`) and the
+  quantification fallback ladder to the resume-review flow.
 - Nothing shipped yet.
 
 ## Rename map

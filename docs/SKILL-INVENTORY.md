@@ -1,6 +1,6 @@
 # Skill Inventory
 
-All 15 skills, grouped by mode. Current status:
+All 16 skills, grouped by mode. Current status:
 
 - **Built + Teal methodology pulled in:** all 15 skills have full `SKILL.md`
   implementations and now carry Teal's actual frameworks (Achievement Formula, Work
@@ -25,6 +25,19 @@ it grills the user to surface everything they've done and helps weave the narrat
   direction, comp, constraints, energizers/drainers).
 - **Deps:** `interview-technique`.
 - **MCP:** optional — can enrich target-role context with market data.
+
+### `teal-mcp`
+One-time infrastructure setup: connect `https://mcp.tealhq.com/mcp` to the user's
+client (free Teal account, OAuth, no API keys) and verify it with a live tool listing
+plus a smoke-test query. The fallback ladder in `references/teal-mcp.md` offers this
+skill before dropping to pasted data.
+- **Input:** which client to connect (defaults to the agent's own runtime); a free
+  Teal account.
+- **Deliverable:** a verified Teal MCP connection (configured, authenticated,
+  smoke-tested).
+- **Deps:** `teal-mcp` reference (the usage contract it hands off to).
+- **MCP:** this skill *creates* the connection; its own fallback is the library's
+  pasted-data path.
 
 ## 💸 Money / Cross-mode
 
