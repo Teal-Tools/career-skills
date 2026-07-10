@@ -16,7 +16,7 @@ read.
 - Name, current title, company, location, years of experience
 
 ## Work Style
-- Teal Work Style sequence, most-to-least (Director / Connector / Producer / Protector)
+- Teal Work Style sequence, most-to-least (Director / Connector / Producer-Supporter / Protector)
 - What energizes the user based on that sequence; environments/roles that fit it
 - (from career-profile / career-clarity; may be self-reported if no assessment taken)
 
@@ -27,8 +27,11 @@ read.
 - (from career-clarity)
 
 ## Skills
-- Energizers (skill + want to do more of it) — what to get hired for
-- Assets (skill + want less), Potentials (not yet skilled + want to grow into)
+- Skills Matrix (2x2: is/isn't a skill x want more/want less):
+  - Energizers (skill + want more) — what to get hired for; the focus
+  - Assets (skill + want less) — use if needed
+  - Potentials (not yet a skill + want more) — develop toward
+  - Drainers (not a skill + want less) — avoid
 - Natural strengths vs. acquired skills; general (transferable) vs. specific
 - (from career-profile capabilities dump / career-clarity / skills-market-report)
 
@@ -47,9 +50,6 @@ read.
 ## Direction
 - Target role(s) / title(s), target comp, timeline, mode (searching/pivoting/growing/thriving)
 - Shift difficulty if pivoting: easy (industry+function) / moderate (function+skills) / hard (knowledge+skills)
-
-## Energizers & drainers
-- What lights the user up / flattens them (from career-clarity)
 
 ## Running toward / running from
 - Motivations pulling forward vs pushing away (from career-clarity)
@@ -76,8 +76,8 @@ future runs (and `career-checkin`) a punch-list of what to chase down.
 - **Every skill reads this first** (if present).
 - **Writers:**
   - `career-profile` — all sections (owns Identity, Work Style, Skills, History, Blurb).
-  - `career-clarity` — Work Style, Values → Motivation → Vision, Direction, Energizers &
-    drainers, Running toward/from.
+  - `career-clarity` — Work Style, Values → Motivation → Vision, Skills (Skills
+    Matrix), Direction, Running toward/from.
   - `win-log` — Wins log pointer (and surfaces achievements that strengthen History/Blurb).
   - `career-checkin` — Meta, drift notes, and updates to Current situation / Direction.
   - `earn-more-plan` — target comp, constraints, selected trajectory (if approved).

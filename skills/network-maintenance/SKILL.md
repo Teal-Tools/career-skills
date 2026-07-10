@@ -111,6 +111,11 @@ mentioned), and last-contact signal found. Ask the user to **keep / add / drop**
 and to flag anyone owed a follow-up that mining missed. Keep it light.
 
 ### Step 3 — Prioritize (the actual judgment call)
+Teal's networking system (above) doesn't prescribe a ranking method for *which*
+contact to reach first — its contribution is the cadence, templates, and norms that
+apply once you've decided. This step is the skill's own judgment call, not a named
+Teal framework; treat it as a starting heuristic the user can freely override.
+
 For each confirmed contact, weigh these signals — none of them alone should force a
 ranking; use judgment, and let the user override:
 

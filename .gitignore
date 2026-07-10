@@ -8,3 +8,6 @@ comp-analysis-*.html
 Thumbs.db
 *.swp
 node_modules/
+
+# Don't want to share
+references/examples.md

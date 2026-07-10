@@ -127,26 +127,29 @@ Always produce three plans unless a user constraint makes one impossible. If one
 ruled out, show it as "not viable under current constraints" and explain why.
 
 The three plans map to Teal's **shift-difficulty ladder** — how hard a move is
-depends on how much of the user's *knowledge, function, and skills* has to change.
-The more that changes at once, the harder and slower the move:
+depends on how much of the user's *industry, function, and skills* has to change.
+The ladder itself only describes moves that involve a shift: **easy = industry +
+function change**, **moderate = function + skills change**, **hard = knowledge +
+skills change**. Plan A below is not a shift at all, so it sits off the ladder as the
+baseline case; Plans B and C are where the ladder applies.
 
-Plan A: **Grow on current path** — *easy: same knowledge*
+Plan A: **Grow on current path** — *off the ladder: no shift*
 - Promotion, level-up, raise, internal transfer, scope expansion, or higher-paying
   version of the current function.
-- Same knowledge, same function — so the move is the lowest-difficulty on the ladder.
-  The primary lever is a **raise**, argued with Teal's **5 value levers**
-  (Knowledge, Network, Leadership, Growth, Savings — the case for why the user is
-  worth more).
+- No industry, function, or knowledge change — the user stays exactly where they are
+  and argues for more. The primary lever is a **raise**, argued with Teal's **5 value
+  levers** (Knowledge, Network, Leadership, Growth, Savings — the case for why the
+  user is worth more).
 - Uses current wins, review evidence, next-level market band, level expectations, and
   internal strategy.
 - Good when the user has strong evidence, low risk tolerance, or high attachment to
   current craft/company.
 
-Plan B: **Change market, not identity** — *moderate: industry + function change*
+Plan B: **Change market, not identity** — *easy: industry + function change*
 - Same or adjacent role at a higher-paying employer, domain, company tier, location,
   work setting, or compensation model.
-- On the ladder this is a market/context change (industry and/or function shift) with
-  the user's core skills intact.
+- This is the ladder's **easy** rung: an industry and/or function shift with the
+  user's core skills intact.
 - Examples: larger company, AI/security/fintech domain, sales/OTE path, remote role in
   higher-paying market, relocation, smaller title at a better-paying company.
 - Good when the user's skill set is already marketable but current environment pays

@@ -96,7 +96,14 @@ Adapt the follow-up questions by situation type:
 
 **Raise / comp ask**
 Ground this in Teal's negotiation view. **You are your best advocate** — nobody else
-will make the case for you. Two tools shape the prep:
+will make the case for you. Three tools shape the prep:
+
+*Define your range.* Set three numbers before scripting anything: a **Walk-Away**
+(the floor — what makes staying not worth it), a **Target** (what the evidence and
+market data actually support), and an **Ask** (open around **10% above Target**, so
+there's room to negotiate down to it). Pull the Target from `comp-analysis` market
+data where possible; without it, mark the range as provisional. Never let the script
+open at the Target number — that leaves no negotiating room.
 
 *Total Comp is five forms, not just salary.* When defining what the user is asking
 for, consider all five: **Cash** (base), **Benefits**, **Variable** (bonus/
@@ -113,6 +120,8 @@ Ask:
   conversation? Which of the 5 value levers does it strengthen?
 - Which of the five Total Comp forms actually matters most to you here — cash, or
   something else (equity, title, remote, PTO)?
+- What's your Walk-Away number, and what's the Target the evidence/market actually
+  supports? (The Ask is ~10% above Target — don't let the user open there.)
 - Has anyone told you a number, a range, or a timeline — or is that an assumption?
 - What does `win-log` or your own memory show that a manager could point to?
 - Do you have `comp-analysis` output or market data, or are we going in without a
@@ -200,8 +209,10 @@ One sentence: what this conversation is for, and what "good" looks like walking 
 A short, direct line that names the topic without over-apologizing or burying the ask.
 
 ## The Ask
-Stated plainly, in one or two sentences. For a raise ask without confirmed market
-data, mark the number as `[TBD — run comp-analysis]` rather than inventing one.
+Stated plainly, in one or two sentences. For a raise ask, state the range: Walk-Away
+/ Target / Ask (~10% above Target) — open at the Ask, not the Target. Without
+confirmed market data, mark the Target as `[TBD — run comp-analysis]` rather than
+inventing one.
 
 ## Anticipated Pushback
 | They might say | How to respond |
