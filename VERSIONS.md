@@ -3,7 +3,22 @@
 Semantic versioning. This file also carries a **rename map** so that when skills
 are consolidated or renamed, old install paths still resolve.
 
-## [Unreleased]
+## [0.1.1] — 2026-07-16
+
+Distribution launch blockers — makes every skill actually installable on claude.ai
+/ Claude Desktop and standalone-safe on per-skill installers (Hermes, `npx skills
+add --skill`, zip uploads).
+
+- **All 16 descriptions rewritten to ≤200 chars** — claude.ai's upload cap (the
+  spec allows 1024, but 200 is the binding constraint). `scripts/validate.mjs` now
+  errors and `scripts/package.mjs` warns above 200.
+- **Canonical resume rubric extracted to `references/resume-rubric.md`**, and
+  `skills/resume-review/calibration.md` moved to `references/resume-calibration.md`,
+  so standalone installs of `tailor-to-job` carry the full rubric and bands
+  (previously they lived only inside `resume-review`'s SKILL.md).
+- **Ephemeral-runtime persistence guardrail** added to all 9 `.agents/*.md`-writing
+  skills and `profile-schema.md`: in sandboxed environments (claude.ai / Desktop),
+  deliver file contents in chat for the user to save and re-paste.
 - Claude Desktop / claude.ai distribution: `scripts/package.mjs` packages each
   skill as a self-contained upload-ready zip (shared references vendored in,
   self-paths rewritten) → `dist/*.zip`; README gained a no-terminal install

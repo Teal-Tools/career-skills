@@ -162,7 +162,7 @@ outputs compound over time. **Build it first.** Its schema lives in
 
 ## 5. Shared references (keep skills DRY)
 
-Three files in `references/`, imported by multiple skills:
+Five files in `references/`, imported by multiple skills:
 
 - **`interview-technique.md`** — how to run a good adaptive "grill me" interview: one
   question at a time, dig on vague answers, quantify everything, don't accept the
@@ -174,6 +174,13 @@ Three files in `references/`, imported by multiple skills:
   the cross-CLI compatibility guarantee.
 - **`teal-method.md`** — the TEAL bullet framework for resume writing. Imported by
   `resume-review`, `tailor-to-job`, `win-log`.
+- **`resume-rubric.md`** — the canonical five-dimension /100 resume rubric. Home
+  skill is `resume-review`; `tailor-to-job` imports it verbatim as its Resume
+  Quality score. Extracted to `references/` (2026-07-16) so standalone installs of
+  either skill carry the full rubric.
+- **`resume-calibration.md`** — career-stage / industry / education calibration for
+  the rubric. Imported by `resume-review` and `tailor-to-job` (moved from
+  `skills/resume-review/calibration.md`, 2026-07-16).
 
 ---
 
@@ -215,7 +222,8 @@ Motivation → Vision, Skills Matrix, Total Comp = 5 forms, Job Posting Analysis
 hiring stages, and more). **2026-07-10: `teal-mcp` added as skill #16 and v0.1.0
 tagged** (see `VERSIONS.md`). See `docs/SKILL-INVENTORY.md` for status,
 `docs/ARCHITECTURE.md` for the cross-reference diagram, and
-`docs/TEAL-INPUT-AUDIT.md` (internal) for the source map.
+`docs/TEAL-INPUT-AUDIT.md` (internal, untracked — kept out of the public repo) for
+the source map.
 
 **Foundation**
 - `career-profile` — one-time interview → persistent `.agents/career-profile.md`.

@@ -56,6 +56,23 @@ decision, move it up to Locked with a date and a one-line rationale.
   the +2/+7/+14 cadence, Career Health, and the shift-difficulty ladder. See
   `docs/TEAL-INPUT-AUDIT.md` (internal — do not publish) for the source mapping.
 
+- **Description cap is 200 chars (decided 2026-07-16):** claude.ai's skill upload
+  caps frontmatter `description` at 200 chars — tighter than the agentskills.io
+  spec's 1024 and the binding constraint across target platforms (OpenClaw
+  recommends <160, Hermes ≤60). All 16 descriptions rewritten to ≤200;
+  `scripts/validate.mjs` errors and `scripts/package.mjs` warns above 200.
+- **Rubric extracted to references/ (2026-07-16):** the canonical resume rubric now
+  lives in `references/resume-rubric.md` and calibration in
+  `references/resume-calibration.md` (moved from `skills/resume-review/`), so
+  standalone installs of `tailor-to-job` carry the full rubric + bands —
+  `package.mjs` vendors `references/*.md` into each zip. `resume-review` remains the
+  rubric's home skill; neither skill redefines a band.
+- **Ephemeral-runtime persistence (2026-07-16):** every `.agents/*.md`-writing skill
+  now carries a "Persistence check" guardrail (and `profile-schema.md` an
+  "Ephemeral runtimes" note): in sandboxed environments (claude.ai / Claude Desktop
+  uploads), deliver the file's full contents in chat and have the user save and
+  re-paste it, since writes don't survive the session.
+
 ## Open (resolve before v1 ships)
 
 1. **`resume-review` / `tailor-to-job` final merge call?** Recommendation: keep
@@ -69,6 +86,9 @@ decision, move it up to Locked with a date and a one-line rationale.
    does not document. Resolution path exists: run the `teal-mcp` skill with a real
    Teal login — its verify step lists the live tools and reconciles them against the
    reference. Until then, confirm they exist or soften the capability promises.
-4. **`docs/TEAL-INPUT-AUDIT.md` is tracked but internal.** Remove it from the repo
-   (and from git history) before any public push, or explicitly bless it as
-   publishable.
+4. **`docs/TEAL-INPUT-AUDIT.md` history scrub.** Untracked and gitignored as of
+   2026-07-16 (removed from the index going forward), but it still exists in
+   unpushed local commits. Before the first public push, rewrite those local
+   commits to drop it (`git filter-branch --index-filter 'git rm --cached
+   --ignore-unmatch docs/TEAL-INPUT-AUDIT.md' -- origin/main..main`, then re-point
+   the `v0.1.0` tag) — or explicitly bless the file as publishable.
