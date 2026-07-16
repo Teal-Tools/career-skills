@@ -1,6 +1,6 @@
 ---
 name: offer-review
-description: Use when the user has received a job offer or a comp package and wants it explained, broken down, or benchmarked against the market — e.g. "can you look at this offer", "is this a good package", "help me understand my equity", "what should I ask before I sign". Works from a pasted offer letter, an uploaded doc, or freeform comp details.
+description: Use when the user has a job offer or comp package to evaluate — "is this a good package," "explain my equity," "what should I ask before signing." Breaks down and benchmarks the full offer.
 ---
 
 # offer-review

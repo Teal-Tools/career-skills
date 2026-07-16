@@ -1,6 +1,6 @@
 ---
 name: career-profile
-description: Use when the user wants to set up their career context, do a deep "capabilities dump" from a resume or LinkedIn, or when another skill needs profile data that doesn't exist yet. Ingests anything the user has — LinkedIn export, resume files, a live LinkedIn fetch when the runtime can browse, or freeform notes — then grills to fill the gaps and audit the timeline, and writes a persistent .agents/career-profile.md that every other skill reads.
+description: Use to set up the user's career context, do a deep capabilities dump, or when another skill needs profile data. Interviews from a resume/LinkedIn; writes .agents/career-profile.md every skill reads.
 ---
 
 # career-profile
@@ -163,6 +163,11 @@ the target direction came out fuzzy. Remind the user other skills will read this
 automatically and offer to update it when they learn something new.
 
 ## Guardrails
+- **Persistence check.** `.agents/*.md` writes assume a workspace that persists
+  between sessions. If the runtime is sandboxed or ephemeral (e.g., a skill uploaded
+  to claude.ai / Claude Desktop), also output the updated file's full contents in
+  chat and tell the user to save it and paste or re-upload it next session —
+  otherwise the write silently evaporates.
 - **Never fabricate.** No invented dates, titles, employers, or metrics. Anything
   uncertain is marked `to-confirm`, not filled with a plausible guess. This file
   becomes the source of truth for resumes and comp decisions — accuracy is the whole

@@ -1,6 +1,6 @@
 ---
 name: earn-more-plan
-description: Use when the user says they want to make more money, get paid more, increase income, maximize compensation, compare career trajectories for higher earnings, or understand whether promotion, switching companies, relocating, upskilling, going back to school, or pivoting could improve their pay. Reads the career profile and constraints, uses Teal MCP job-market data when available, and produces an interactive HTML report with three compensation-growth plans, projections, timelines, trade-offs, and non-starter filters.
+description: Use when the user wants to make more money — a raise, promotion, company switch, relocation, or pivot. Produces an HTML report comparing three pay-growth plans with projections and trade-offs.
 ---
 
 # earn-more-plan

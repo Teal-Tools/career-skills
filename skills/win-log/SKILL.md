@@ -1,6 +1,6 @@
 ---
 name: win-log
-description: Use when the user wants to capture recent accomplishments, keep a brag doc / wins log, do a weekly win check-in, or gather evidence of impact for a resume, performance review, promotion case, or raise. First mines whatever history and tools are available to surface wins the user forgot, then interviews to fill gaps and attach evidence, then writes them up as a persistent, resume-ready wins log.
+description: Use when the user wants to capture accomplishments, keep a brag doc, or gather evidence for a review or raise. Mines history for forgotten wins, interviews for proof, writes a resume-ready wins log.
 ---
 
 # win-log
@@ -171,6 +171,11 @@ roll up into a Blurb or a pivot. Preserve prior entries — append and merge, ne
 clobber. Carry `metric TODO` markers forward until the number is found.
 
 ## Guardrails
+- **Persistence check.** `.agents/*.md` writes assume a workspace that persists
+  between sessions. If the runtime is sandboxed or ephemeral (e.g., a skill uploaded
+  to claude.ai / Claude Desktop), also output the updated file's full contents in
+  chat and tell the user to save it and paste or re-upload it next session —
+  otherwise the write silently evaporates.
 - **Truth over polish.** Only log what actually happened; never fabricate metrics or
   quotes. A wins log that inflates is worse than none — it fails the user in the room
   where it matters.

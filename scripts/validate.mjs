@@ -119,8 +119,17 @@ function validateSkill(file) {
     addError(relative, `name "${data.name}" must use lowercase letters, digits, and hyphens`);
   }
 
-  if (data.description && !/\bUse (when|for)\b/i.test(data.description)) {
+  if (data.description && !/\bUse (when|for|to)\b/i.test(data.description)) {
     addWarning(relative, "description should include trigger phrasing like 'Use when' or 'Use for'");
+  }
+
+  // claude.ai skill upload rejects/truncates descriptions over 200 chars — the
+  // tightest cap across target platforms (spec allows 1024; OpenClaw suggests <160).
+  if (data.description && [...data.description].length > 200) {
+    addError(
+      relative,
+      `description is ${[...data.description].length} chars (max 200 for claude.ai upload)`
+    );
   }
 
   const requiredSections = [

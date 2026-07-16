@@ -1,6 +1,6 @@
 # Reference: Context calibration (career stage, industry, education)
 
-Used by `resume-review` (and by extension `tailor-to-job`, which imports its rubric).
+Used alongside `references/resume-rubric.md` by `resume-review` and `tailor-to-job`.
 The rubric's five dimensions never change — **what a good score looks like does**. A
 retail resume doesn't need finance-grade quantification; a new grad leading with
 education isn't a structural flaw. Detect the context first, then score against the

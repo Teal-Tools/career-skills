@@ -1,6 +1,6 @@
 ---
 name: comp-analysis
-description: Use when the user wants to know where their compensation should be — where they stand versus the market for their title, level, years of experience, and location, and where the money is (raise in current title, a step-up, or a step-down at a bigger company). Works from the career-profile or just a job title, aggregates real postings (paste up to 10, fetch via browser, or pull ~100 via the Teal MCP), and produces a self-contained HTML report.
+description: Use when the user asks where their pay should be versus the market for their title, level, and location. Aggregates real postings (pasted, fetched, or via Teal MCP) into an HTML comp report.
 ---
 
 # comp-analysis

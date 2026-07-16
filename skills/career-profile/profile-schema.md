@@ -92,3 +92,11 @@ future runs (and `career-checkin`) a punch-list of what to chase down.
 `.agents/career-profile.md` in the user's working directory. Every skill looks there
 first; if absent, the skill proceeds from pasted/described context and offers to create
 the profile.
+
+**Ephemeral runtimes:** the path above assumes a workspace that persists between
+sessions (a CLI running in the user's project). When the skill runs in a sandboxed
+or ephemeral environment — e.g., uploaded to claude.ai or Claude Desktop — files
+written there do not survive the conversation. In that case, always deliver the
+profile's full markdown in chat as well, and tell the user to save it and paste it
+(or re-upload it) at the start of the next session; treat pasted profile content as
+equivalent to the file.

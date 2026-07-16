@@ -1,6 +1,6 @@
 ---
 name: job-application
-description: Use when the user wants to fill out or submit a job application for a specific posting — "apply to this job," "fill out this application," "submit my application to Acme," or "help me get through this application form." Uses computer-use browser control when the runtime supports it (Codex computer-use, Claude Cowork, Claude Chrome-style tools); otherwise produces a manual-fill answer checklist the user pastes in themselves.
+description: Use when the user wants to fill out or submit a job application for a specific posting. Drives the form via browser control where supported; otherwise produces a manual-fill answer checklist.
 ---
 
 # job-application

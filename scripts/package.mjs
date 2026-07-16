@@ -19,8 +19,10 @@ const skillsDir = path.join(root, "skills");
 const referencesDir = path.join(root, "references");
 const distDir = path.join(root, "dist");
 
-// claude.ai upload constraints (LCD spec stays name + description)
-const MAX_DESCRIPTION = 1024;
+// claude.ai upload constraints (LCD spec stays name + description).
+// claude.ai caps description at 200 chars — tighter than the agentskills.io
+// spec's 1024 — and it is the binding constraint for these zips.
+const MAX_DESCRIPTION = 200;
 const MAX_NAME = 64;
 
 const requested = process.argv.slice(2);
