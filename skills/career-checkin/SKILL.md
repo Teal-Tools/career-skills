@@ -1,6 +1,6 @@
 ---
 name: career-checkin
-description: Use for a periodic career check-in when the user wants to inspect whether they are still on track, how work feels, how their company or manager may be perceiving them, whether their concerns are evidence-backed or self-gaslighting, and what to adjust next. Produces a dated check-in summary with drift flags and 1-3 concrete next actions.
+description: Use for a periodic career check-in — is the user on track, how does work feel, are concerns evidence-backed or self-gaslighting? Produces a dated summary with drift flags and next actions.
 ---
 
 # career-checkin
@@ -238,6 +238,11 @@ durable changes:
 Do not overwrite the user's profile silently.
 
 ## Guardrails
+- **Persistence check.** `.agents/*.md` writes assume a workspace that persists
+  between sessions. If the runtime is sandboxed or ephemeral (e.g., a skill uploaded
+  to claude.ai / Claude Desktop), also output the updated file's full contents in
+  chat and tell the user to save it and paste or re-upload it next session —
+  otherwise the write silently evaporates.
 - **Evidence over spiraling.** Feelings matter, but the output must distinguish facts,
   patterns, weak signals, and stories.
 - **No fake certainty.** Never claim the company believes something unless there is

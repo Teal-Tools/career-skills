@@ -1,6 +1,6 @@
 ---
 name: career-clarity
-description: Use when the user is unsure of their career direction, considering a pivot, choosing between paths, feeling stuck or misfit, or wanting to explore roles based on values, motivation, vision, energizers, drainers, skills, work style, domains, company stage, pace, environment, and lifestyle constraints. Runs an adaptive interview using Teal's Values→Motivation→Vision and Skills Matrix method, optionally explores occupations with Teal MCP job-market data, and produces a clarity brief with candidate directions and next experiments.
+description: Use when the user feels stuck, unsure of direction, or weighing a pivot. Runs an adaptive interview on values, energizers, and skills; produces a clarity brief with directions and next experiments.
 ---
 
 # career-clarity
@@ -297,6 +297,11 @@ After writing the brief:
 - suggest `career-checkin` if the user needs a recurring decision review.
 
 ## Guardrails
+- **Persistence check.** `.agents/*.md` writes assume a workspace that persists
+  between sessions. If the runtime is sandboxed or ephemeral (e.g., a skill uploaded
+  to claude.ai / Claude Desktop), also output the updated file's full contents in
+  chat and tell the user to save it and paste or re-upload it next session —
+  otherwise the write silently evaporates.
 - **Explore, do not prescribe.** The output should clarify options and experiments,
   not tell the user what to do with their life.
 - **Do not confuse pain with direction.** A current-job problem may mean a new team,

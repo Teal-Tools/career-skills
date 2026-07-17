@@ -1,6 +1,6 @@
 ---
 name: difficult-conversation
-description: Use when the user needs to prepare for a hard, high-stakes conversation with a manager or peer — asking for a raise, asking for a scope/role change, working through a conflict, or resigning/exiting a role. Grills for what actually happened versus what the user fears or assumes, then produces an honest, evidence-backed script with an opening line, the ask, anticipated pushback, and a fallback if the answer is no.
+description: Use when the user must prep a hard talk with a manager or peer — a raise, scope change, conflict, or resignation. Produces an honest, evidence-backed script with the ask, pushback, and a fallback.
 ---
 
 # difficult-conversation
@@ -313,6 +313,11 @@ After delivering:
   (e.g., a decision to leave, a new target direction, a resolved constraint).
 
 ## Guardrails
+- **Persistence check.** `.agents/*.md` writes assume a workspace that persists
+  between sessions. If the runtime is sandboxed or ephemeral (e.g., a skill uploaded
+  to claude.ai / Claude Desktop), also output the updated file's full contents in
+  chat and tell the user to save it and paste or re-upload it next session —
+  otherwise the write silently evaporates.
 - **No manipulation.** Never coach guilt-tripping, ultimatums used as leverage,
   exaggeration, or dishonesty. The goal is the user being clear and truthful, not
   "winning" against their manager or employer.

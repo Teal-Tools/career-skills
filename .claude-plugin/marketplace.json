@@ -4,13 +4,13 @@
     "name": "Teal",
     "email": "david.fano@tealhq.com"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "AI agent skills for every stage of your career — searching, pivoting, growing, and thriving. Built by Teal.",
   "plugins": [
     {
       "name": "career-skills",
       "source": "./",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "16 composable career skills unified by a shared career-profile — resume review, comp analysis, interview prep, win logging, career check-ins, and more — across searching, pivoting, growing, and thriving. Connects to the Teal MCP for live job-market data.",
       "keywords": [
         "career",

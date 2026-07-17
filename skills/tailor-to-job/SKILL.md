@@ -1,6 +1,6 @@
 ---
 name: tailor-to-job
-description: Use when the user has a resume AND a specific job description and wants the resume matched or tailored to it — "tailor my resume to this posting," "how well do I match this JD," "rewrite my resume for this job," or "what should I change to fit this role." Produces a tailored resume plus a match assessment. If there's no target JD, use resume-review instead.
+description: Use when the user has a resume AND a specific job description — "tailor my resume," "how well do I match this JD." Produces a tailored rewrite plus match assessment. No JD? Use resume-review.
 ---
 
 # tailor-to-job
@@ -9,8 +9,9 @@ description: Use when the user has a resume AND a specific job description and w
 scores it against one specific posting and rewrites it to fit — honestly. The two
 skills are deliberately kept separate (different input: no-JD vs. JD; different
 deliverable: a general score vs. a targeted rewrite), but they must never drift into
-two incompatible ways of judging a resume. This skill **imports `resume-review`'s
-five-dimension rubric outright** rather than inventing its own resume-quality scale,
+two incompatible ways of judging a resume. This skill **imports the canonical
+five-dimension rubric (`references/resume-rubric.md`) outright** — the same file
+`resume-review` scores against — rather than inventing its own resume-quality scale,
 and adds exactly one new thing on top: how well the resume maps to *this* JD.
 
 ## Inputs
@@ -33,11 +34,15 @@ deliverable either way; the file is a convenience, matching the pattern
 `resume-review` and `offer-review` already use.
 
 ## Dependencies
-- **`resume-review`** — imports its canonical five-dimension **/100 rubric**
+- **`references/resume-rubric.md`** — the canonical five-dimension **/100 rubric**
   (Impact & Quantification /35, Clarity/Structure/Summary /20, Seniority & Scope Signal
-  /20, Formatting & ATS Hygiene /15, Relevance & Focus /10) verbatim. This skill does
-  **not** redefine or re-band those dimensions — see "Scoring" below for exactly how
-  they combine with the JD-match score this skill adds.
+  /20, Formatting & ATS Hygiene /15, Relevance & Focus /10), imported verbatim. It is
+  the same file `resume-review` scores against — this skill does **not** redefine or
+  re-band those dimensions; see "Scoring" below for exactly how they combine with the
+  JD-match score this skill adds.
+- **`references/resume-calibration.md`** — career-stage, industry, and education
+  calibration for the rubric. Detect the context the way `resume-review` does, then
+  score against the right column.
 - **`references/teal-method.md`** — the **Achievement Formula** (Success Verb +
   Noun/Keyword + Metric + Outcome; Achievement = Skill + Proof) that every rewrite must
   follow, and the **ATS-myth** section that keyword guidance must match exactly (no
@@ -96,7 +101,8 @@ rewrites below.
 
 Report **two scores side by side, not one blended number**:
 
-1. **Resume Quality: _/100_** — exactly `resume-review`'s rubric, unchanged. This
+1. **Resume Quality: _/100_** — exactly the `references/resume-rubric.md` rubric,
+   unchanged (the one `resume-review` also scores against). This
    judges whether the resume is well-written on its own terms, independent of any
    posting.
 2. **JD Match: _/100_** — coverage of the posting's requirements, derived directly from
@@ -138,8 +144,9 @@ what they want — this highlighted list is what Steps 4–6 are diffed against,
 skip straight to a gut read of "close match" or "not a fit."
 
 ### Step 3 — Score resume quality (independent of the JD)
-Run `resume-review`'s five-dimension rubric exactly as that skill defines it, using
-its bands and justification style. This score should be identical to what
+Run the five-dimension rubric in `references/resume-rubric.md` exactly as written,
+using its bands and justification style, calibrated per
+`references/resume-calibration.md`. This score should be identical to what
 `resume-review` would produce on this same resume — if the user already has a recent
 `resume-review` output, reuse it here instead of re-scoring.
 
@@ -198,6 +205,11 @@ same JD and the freshly tailored bullets and turns them into a STAR story bank f
 interview itself.
 
 ## Guardrails
+- **Persistence check.** `.agents/*.md` writes assume a workspace that persists
+  between sessions. If the runtime is sandboxed or ephemeral (e.g., a skill uploaded
+  to claude.ai / Claude Desktop), also output the updated file's full contents in
+  chat and tell the user to save it and paste or re-upload it next session —
+  otherwise the write silently evaporates.
 - **Never fabricate a match.** Do not claim a skill, tool, certification, or years of
   experience the resume doesn't actually support, and do not word a bullet to imply
   a genuine gap is covered. This is a hard line — the risk isn't just a bad rewrite,

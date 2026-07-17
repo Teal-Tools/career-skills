@@ -1,6 +1,6 @@
 ---
 name: network-maintenance
-description: Use when the user wants to keep their professional network warm, catch up on relationships they've let go cold, figure out who to reconnect with and why, or draft a genuine outreach message before reaching out. Also use as a recurring monthly/quarterly relationship-upkeep ritual. Mines whatever contact history is reachable, prioritizes who's actually worth reaching out to now, and drafts short, specific, non-spammy messages the user sends themselves.
+description: Use when the user wants to keep their network warm, pick who to reconnect with, or draft genuine outreach — including as a monthly ritual. Produces a prioritized reconnect list with specific drafts.
 ---
 
 # network-maintenance
@@ -261,6 +261,11 @@ Guidelines: keep the tiering honest — don't inflate a weak-tie contact into Pr
 "needs a real detail" items forward to the next run until they're resolved.
 
 ## Guardrails
+- **Persistence check.** `.agents/*.md` writes assume a workspace that persists
+  between sessions. If the runtime is sandboxed or ephemeral (e.g., a skill uploaded
+  to claude.ai / Claude Desktop), also output the updated file's full contents in
+  chat and tell the user to save it and paste or re-upload it next session —
+  otherwise the write silently evaporates.
 - **The user sends, not the agent.** Never say or imply the agent contacted, will
   contact, or is contacting anyone on the user's behalf. Drafts are handed to the
   user to copy, edit, and send.

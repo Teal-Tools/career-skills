@@ -1,6 +1,6 @@
 ---
 name: teal-mcp
-description: Use when the user wants to connect the Teal MCP for live job-market data — "set up the Teal MCP," "connect Teal," "hook up live job data," "add Teal to Claude/ChatGPT/Cursor," "is the Teal MCP working?" — or when another skill's fallback ladder found no MCP and the user wants the upgrade instead of pasting data. Walks through connecting https://mcp.tealhq.com/mcp to whatever client the user runs (free Teal account, OAuth login, no API keys), then verifies the connection with a live tool listing and a smoke-test query.
+description: Use to connect live job-market data — "set up the Teal MCP," "connect Teal" — or when a skill's fallback found no MCP. Connects mcp.tealhq.com/mcp to the user's client (OAuth) and verifies it live.
 ---
 
 # teal-mcp

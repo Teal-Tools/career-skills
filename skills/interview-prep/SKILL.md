@@ -1,6 +1,6 @@
 ---
 name: interview-prep
-description: Use when the user has an interview coming up and wants to prepare — "help me prep for this interview," "what questions will they ask," "build me a story bank," "I have a Zoom with Acme on Thursday." Takes a resume + target JD (and a tailor-to-job output if one exists) and produces likely questions plus an evidence-backed STAR story bank.
+description: Use when the user has an interview coming up — "help me prep," "what will they ask," "build a story bank." Takes a resume + target JD; produces likely questions and an evidence-backed STAR story bank.
 ---
 
 # interview-prep

@@ -1,6 +1,6 @@
 ---
 name: performance-self-review
-description: Use when the user wants to prepare an honest self-assessment, performance review, promotion-cycle reflection, or manager-facing review draft. Reads the career profile, win log, and career check-ins when present, grills for evidence and gaps, and produces a candid performance self-review draft with strengths, misses, evidence, growth areas, and goals.
+description: Use when the user is drafting a self-assessment, performance review, or promotion reflection. Grills for evidence; produces a candid self-review draft with strengths, misses, growth areas, and goals.
 ---
 
 # performance-self-review
@@ -237,6 +237,11 @@ After writing the draft:
   decide what it means.
 
 ## Guardrails
+- **Persistence check.** `.agents/*.md` writes assume a workspace that persists
+  between sessions. If the runtime is sandboxed or ephemeral (e.g., a skill uploaded
+  to claude.ai / Claude Desktop), also output the updated file's full contents in
+  chat and tell the user to save it and paste or re-upload it next session —
+  otherwise the write silently evaporates.
 - **Truth over polish.** Make the review compelling because it is specific, not
   because it exaggerates.
 - **Do not self-sabotage.** Include misses and growth areas with ownership and

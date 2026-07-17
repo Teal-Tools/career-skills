@@ -1,6 +1,6 @@
 ---
 name: skills-market-report
-description: Use when the user has a current role plus a target title, occupation, or candidate direction from career-clarity and wants to know what the market actually asks for, how their current skills transfer, where the gaps are, and what learning or positioning moves would make the pivot more credible. Aggregates postings with Teal MCP when available and produces a market skill-gap roadmap.
+description: Use when the user has a role plus a target title and wants what the market asks for, how their skills transfer, and where the gaps are. Produces a skill-gap report with a proof-building roadmap.
 ---
 
 # skills-market-report
@@ -276,6 +276,11 @@ After writing the report:
 - suggest `comp-analysis` if pay trade-offs are material.
 
 ## Guardrails
+- **Persistence check.** `.agents/*.md` writes assume a workspace that persists
+  between sessions. If the runtime is sandboxed or ephemeral (e.g., a skill uploaded
+  to claude.ai / Claude Desktop), also output the updated file's full contents in
+  chat and tell the user to save it and paste or re-upload it next session —
+  otherwise the write silently evaporates.
 - **Sample size matters.** Always show n, source, date, and how titles were searched.
 - **Do not gatekeep from wish lists.** Job postings overstate requirements. Distinguish
   must-have from nice-to-have and noisy wishlist items.
