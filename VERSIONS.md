@@ -3,6 +3,25 @@
 Semantic versioning. This file also carries a **rename map** so that when skills
 are consolidated or renamed, old install paths still resolve.
 
+## [Unreleased]
+
+- **New skill: `giving-feedback`** (skill #17, Growing) — the manager-side counterpart
+  to `performance-self-review`. Interviews the user for what actually happened, runs
+  every point through an observation-vs-story test, and produces a three-part packet:
+  a factual **Record** for their files, a communicative **Send** document to share as
+  a pre-read, and terse **Meeting Notes** for the conversation. Handles feedback to a
+  report, a peer, or a manager, flexing the document by relationship.
+- **New reference: `references/nvc-method.md`** — Nonviolent Communication
+  (Observation → Feeling → Need → Request), the camera test for separating fact from
+  story, real feelings vs. accusations in disguise, requests vs. demands, and a
+  "don't sound like NVC" tone section so output reads as a leader, not a workshop.
+  Recommends Rosenberg's *Nonviolent Communication: A Language of Life*.
+- First skill in the library whose deliverable concerns **someone other than the
+  user**. Carries guardrails to match: no unfalsifiable trait feedback, no
+  paper-trail construction, PIP situations routed to HR, harassment and
+  discrimination never reframed as communication problems, and the user's
+  `career-profile` never populated with a third party's performance details.
+
 ## [0.1.1] — 2026-07-16
 
 Distribution launch blockers — makes every skill actually installable on claude.ai

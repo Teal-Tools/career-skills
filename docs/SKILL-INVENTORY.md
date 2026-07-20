@@ -145,6 +145,19 @@ Prep and script a hard conversation with a manager (raise, scope, conflict, exit
 - **Deps:** `career-profile`. Must be honest and constructive, never manipulative.
 - **MCP:** optional — comp context for a raise conversation.
 
+### `giving-feedback`
+Grills for what actually happened, separates observation from story, then writes the
+feedback up for a report, peer, or manager. Built on NVC (Observation → Feeling →
+Need → Request).
+- **Input:** the situation + who the feedback is for and their relation to the user.
+- **Deliverable:** a three-part packet — a factual **Record** for the user's files, a
+  communicative **Send** document as a pre-read, and terse **Meeting Notes** for the
+  conversation itself.
+- **Deps:** `nvc-method`, `interview-technique`; reads `career-profile` if present.
+  Never writes another person's details into it. Kills unfalsifiable trait feedback,
+  refuses to build a paper trail, and routes harassment/discrimination to HR.
+- **MCP:** none.
+
 ## 🌱 Thriving (the differentiator)
 
 ### `career-checkin`
