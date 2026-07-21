@@ -3,7 +3,10 @@
 Semantic versioning. This file also carries a **rename map** so that when skills
 are consolidated or renamed, old install paths still resolve.
 
-## [Unreleased]
+## [0.2.0] — 2026-07-20
+
+Adds the Growing quadrant's manager-side skill and the NVC method behind it, taking
+the library from 16 skills to 17.
 
 - **New skill: `giving-feedback`** (skill #17, Growing) — the manager-side counterpart
   to `performance-self-review`. Interviews the user for what actually happened, runs
@@ -21,6 +24,10 @@ are consolidated or renamed, old install paths still resolve.
   paper-trail construction, PIP situations routed to HR, harassment and
   discrimination never reframed as communication problems, and the user's
   `career-profile` never populated with a third party's performance details.
+- **`difficult-conversation` now imports `references/nvc-method.md`** — its Step 1
+  fact-vs-story pass and its scripting step use the same camera test and
+  pseudo-feelings check as `giving-feedback`, so the two skills separate observation
+  from story identically instead of drifting.
 
 ## [0.1.1] — 2026-07-16
 

@@ -14,7 +14,7 @@ Built by [Teal](https://tealhq.com)
 
 ---
 
-> **Status: v0.1.0.** All **16 skills are built** — no stubs — and carry Teal's
+> **Status: v0.2.0.** All **17 skills are built** — no stubs — and carry Teal's
 > methodology (see [`VERSIONS.md`](./VERSIONS.md) for the changelog). A few launch
 > items remain before a public push, notably confirming cross-CLI compatibility —
 > tracked in [`docs/DECISIONS.md`](./docs/DECISIONS.md). See [`docs/`](./docs) for
@@ -40,7 +40,7 @@ Every skill belongs to one of four modes — the state you're in with your caree
 |------|----------|--------|
 | **🔍 Searching** | looking for a new role | resume-review · tailor-to-job · interview-prep · offer-review · job-application |
 | **🧭 Pivoting** | changing direction | career-clarity · skills-market-report |
-| **📈 Growing** | advancing where you are | earn-more-plan · comp-analysis · performance-self-review · difficult-conversation |
+| **📈 Growing** | advancing where you are | earn-more-plan · comp-analysis · performance-self-review · giving-feedback · difficult-conversation |
 | **🌱 Thriving** | maintaining a healthy career | career-checkin · win-log · network-maintenance |
 
 At the center sits **`career-profile`** — a one-time interview that builds a
@@ -107,6 +107,7 @@ Use a skill by asking your agent for it directly, for example:
 |------|----------------|-------------|
 | `comp-analysis` | Benchmarks current compensation against market data for a role, level, and location. | `Use $comp-analysis to tell me where my senior PM comp sits in the market.` |
 | `performance-self-review` | Turns wins, feedback, misses, and goals into an honest performance self-review draft with evidence and calibration notes. | `Use $performance-self-review to draft my midyear self-assessment.` |
+| `giving-feedback` | Grills for what actually happened, separates observation from story, and drafts feedback to share: a record, a send-ahead document, and meeting notes. | `Use $giving-feedback to prepare feedback for my engineer on missed follow-through.` |
 | `difficult-conversation` | Prepares framing, talking points, and anticipated responses for a hard manager conversation: raise, scope, conflict, or exit. | `Use $difficult-conversation to prepare for asking my manager about promotion scope.` |
 
 ### Thriving

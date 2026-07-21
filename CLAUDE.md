@@ -162,7 +162,7 @@ outputs compound over time. **Build it first.** Its schema lives in
 
 ## 5. Shared references (keep skills DRY)
 
-Five files in `references/`, imported by multiple skills:
+Six files in `references/`, imported by multiple skills:
 
 - **`interview-technique.md`** — how to run a good adaptive "grill me" interview: one
   question at a time, dig on vague answers, quantify everything, don't accept the
@@ -181,6 +181,10 @@ Five files in `references/`, imported by multiple skills:
 - **`resume-calibration.md`** — career-stage / industry / education calibration for
   the rubric. Imported by `resume-review` and `tailor-to-job` (moved from
   `skills/resume-review/calibration.md`, 2026-07-16).
+- **`nvc-method.md`** — Nonviolent Communication (Observation → Feeling → Need →
+  Request), the camera test for separating fact from story, real feelings vs.
+  accusations in disguise, and a "don't sound like NVC" tone section. Imported by
+  `giving-feedback` and `difficult-conversation` (added 2026-07-20).
 
 ---
 
@@ -213,7 +217,7 @@ Report back what you find and pick symlink vs. sync before building more skills.
 
 ---
 
-## 7. The full skill inventory (16 skills, by mode)
+## 7. The full skill inventory (17 skills, by mode)
 
 **Update (2026-07-06): all 15 original skills are built and carry Teal's actual
 methodology** — no remaining `[SPEC]` stubs, and the placeholder frameworks have been
@@ -259,7 +263,12 @@ the source map.
   `teal-mcp`. **This is a moat skill.**
 - `performance-self-review` — Pocock-style grill → honest self-assessment. Reads
   `interview-technique`, `win-log`.
-- `difficult-conversation` — prep + script a hard talk with a manager.
+- `giving-feedback` — grill → separate observation from story → a three-part feedback
+  packet (record, send-ahead document, meeting notes) for a report, peer, or manager.
+  Reads `nvc-method`, `interview-technique`. The manager-side counterpart to
+  `performance-self-review`.
+- `difficult-conversation` — prep + script a hard talk with a manager. Reads
+  `nvc-method`, `interview-technique`.
 
 **Thriving** (our differentiator — nobody has built this quadrant)
 - `career-checkin` — quarterly maintenance interview against the profile.
@@ -352,14 +361,14 @@ career-skills/
 │   ├── interview-technique.md  ← shared adaptive grill-me method
 │   ├── teal-mcp.md             ← job-data querying + fallback + tool list
 │   └── teal-method.md          ← TEAL bullet framework (draft — see docs/DECISIONS.md)
-├── skills/<16 skills>/SKILL.md ← skill source files, all built
+├── skills/<17 skills>/SKILL.md ← skill source files, all built
 ├── scripts/validate.mjs        ← dependency-free frontmatter/structure linter
 ├── scripts/sync.mjs            ← Windows/CI fallback for the symlink layout
 └── .claude-plugin/marketplace.json ← plugin install manifest
 ```
 
-All 16 skills and all 3 shared references are built and carry Teal methodology;
-v0.1.0 was tagged 2026-07-10 (`VERSIONS.md` has the changelog). The remaining open
+All 17 skills and all 6 shared references are built and carry Teal methodology;
+v0.2.0 was tagged 2026-07-20 (`VERSIONS.md` has the changelog). The remaining open
 items are tracked in `docs/DECISIONS.md` (the cross-CLI compatibility spike, the
 resume-review/tailor-to-job merge call, and the unverified Teal MCP tool suites —
 the plugin-marketplace schema check is resolved: schema-valid, skills auto-discovered).
