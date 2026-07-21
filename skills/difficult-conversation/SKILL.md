@@ -44,6 +44,11 @@ sensitive enough that the user may not want a file). It contains:
 - `references/interview-technique.md` — the adaptive interview ladder, used here to
   separate what actually happened (fact) from the user's interpretation or anxiety
   (story) before drafting anything.
+- `references/nvc-method.md` — the observation-vs-story test (could a video camera
+  have recorded it?) and the pseudo-feelings check, used in Step 1 to pin the account
+  to facts, and again when scripting so the opening line names an observation rather
+  than an accusation. Shared with `giving-feedback` so the two skills separate fact
+  from story the same way.
 - Reads `.agents/career-profile.md`, `.agents/win-log.md`, and
   `.agents/career-checkins.md` if present; works standalone from pasted context if not.
 - For a raise ask, hands off to `comp-analysis` for the actual number — this skill
@@ -91,6 +96,15 @@ Then apply the ladder (Claim → Proof → Counter-evidence → Missing data →
 to the user's own account. Classify the core claim behind the ask as strong evidence,
 mixed evidence, weak signal, story, or unknown — and say so back to the user before
 moving on.
+
+Run the account through `references/nvc-method.md`'s **camera test**: could a video
+camera have recorded it? "My manager has it out for me" is a story; "my last two
+projects went to other people after I asked for them" is what the camera saw. Push
+every claim toward the version a camera would confirm — that is the version that
+survives the actual conversation. The same reference's pseudo-feelings check applies
+here too: "I feel undermined / dismissed / overlooked" are accusations wearing a
+feeling's clothes, and they will read as attacks in the room. Reserve them for the
+private prep, not the script.
 
 Adapt the follow-up questions by situation type:
 
